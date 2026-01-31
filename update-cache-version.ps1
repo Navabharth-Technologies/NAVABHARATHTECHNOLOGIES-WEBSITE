@@ -1,4 +1,4 @@
-# PowerShell script to update cache-busting version from v=2 to v=3
+﻿# PowerShell script to update cache-busting version from v=2 to v=3
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
 
@@ -19,3 +19,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "Cache-busting version updated to v=3!"
+

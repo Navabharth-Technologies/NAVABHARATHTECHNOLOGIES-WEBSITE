@@ -1,4 +1,4 @@
-# PowerShell script to update all favicon references to use absolute root paths (/)
+﻿# PowerShell script to update all favicon references to use absolute root paths (/)
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
 
@@ -40,3 +40,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "All favicon references now point to root directory!"
+

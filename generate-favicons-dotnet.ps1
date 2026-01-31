@@ -1,4 +1,4 @@
-# PowerShell script to generate favicons using .NET classes
+﻿# PowerShell script to generate favicons using .NET classes
 # No external dependencies required
 
 Add-Type -AssemblyName System.Drawing
@@ -69,3 +69,4 @@ catch {
     Write-Error $_.Exception.Message
     exit 1
 }
+

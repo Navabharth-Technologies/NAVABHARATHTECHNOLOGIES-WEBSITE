@@ -1,4 +1,4 @@
-# PowerShell script to optimize favicons for better visibility
+﻿# PowerShell script to optimize favicons for better visibility
 # This script crops/zooms the favicon to make it appear larger in browser tabs
 
 Add-Type -AssemblyName System.Drawing
@@ -104,3 +104,4 @@ catch {
     Write-Error $_.Exception.Message
     exit 1
 }
+

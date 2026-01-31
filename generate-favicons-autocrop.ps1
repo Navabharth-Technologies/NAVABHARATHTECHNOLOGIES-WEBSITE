@@ -1,4 +1,4 @@
-# PowerShell script to auto-crop transparent space and generate favicons
+﻿# PowerShell script to auto-crop transparent space and generate favicons
 # This removes excess transparent padding to make the logo fill more of the icon space
 
 Add-Type -AssemblyName System.Drawing
@@ -129,3 +129,4 @@ catch {
     Write-Error $_.Exception.Message
     exit 1
 }
+

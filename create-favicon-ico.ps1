@@ -1,4 +1,4 @@
-# PowerShell script to create favicon.ico from PNG files
+﻿# PowerShell script to create favicon.ico from PNG files
 # Creates a multi-resolution .ico file for better Google Search compatibility
 
 Add-Type -AssemblyName System.Drawing
@@ -81,3 +81,4 @@ catch {
     Write-Error $_.Exception.Message
     exit 1
 }
+

@@ -1,4 +1,4 @@
-# PowerShell script to add favicon.ico reference to all HTML files
+﻿# PowerShell script to add favicon.ico reference to all HTML files
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
 
@@ -32,3 +32,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "Favicon.ico references added!"
+

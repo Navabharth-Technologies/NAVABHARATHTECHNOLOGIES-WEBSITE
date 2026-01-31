@@ -1,4 +1,4 @@
-# PowerShell script to ensure favicon.ico is the FIRST favicon reference in all HTML files
+﻿# PowerShell script to ensure favicon.ico is the FIRST favicon reference in all HTML files
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
 
@@ -36,3 +36,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "Favicon.ico is now the FIRST reference in all HTML files!"
+

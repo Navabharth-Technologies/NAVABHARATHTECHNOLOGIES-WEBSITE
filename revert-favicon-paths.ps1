@@ -1,4 +1,4 @@
-# PowerShell script to revert absolute paths for favicons
+﻿# PowerShell script to revert absolute paths for favicons
 # Changes href="/favicon..." back to href="favicon..."
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
@@ -41,3 +41,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "Favicon paths reverted to relative!"
+

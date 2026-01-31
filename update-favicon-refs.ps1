@@ -1,4 +1,4 @@
-# PowerShell script to update all HTML files with cache-busting favicon parameters
+﻿# PowerShell script to update all HTML files with cache-busting favicon parameters
 
 $files = Get-ChildItem -Path "." -Filter "*.html" -File
 
@@ -36,3 +36,4 @@ foreach ($file in $files) {
 
 Write-Output ""
 Write-Output "Favicon cache-busting update complete!"
+
