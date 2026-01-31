@@ -1743,10 +1743,16 @@ body {
 
 .contact-list .icon {
     margin-right: 0.75rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    background: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--primary-color);
 }
 
 .contact-list a {

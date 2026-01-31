@@ -79,7 +79,7 @@ const translations = {
         footer_services: "Services",
         footer_contact: "Contact",
         footer_social_title: "Follow Us",
-        footer_copyright: "Â© 2026 Navabharath Technologies. All rights reserved.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. All rights reserved.",
 
         // Resources Page
         resources_intro_title: "Knowledge Hub",
@@ -302,7 +302,7 @@ const translations = {
         footer_services: "Servicios",
         footer_contact: "Contacto",
         footer_social_title: "SÃ­guenos",
-        footer_copyright: "Â© 2026 Navabharath Technologies. Todos los derechos reservados.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. Todos los derechos reservados.",
 
         // Explore Page
         explore_banner_title: "Explorar",
@@ -461,7 +461,7 @@ const translations = {
         footer_services: "Services",
         footer_contact: "Contact",
         footer_social_title: "Suivez-Nous",
-        footer_copyright: "Â© 2026 Navabharath Technologies. Tous droits rÃ©servÃ©s.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. Tous droits rÃ©servÃ©s.",
 
         // Explore Page
         explore_banner_title: "Explorer",
@@ -620,7 +620,7 @@ const translations = {
         footer_services: "Dienstleistungen",
         footer_contact: "Kontakt",
         footer_social_title: "Folgen Sie Uns",
-        footer_copyright: "Â© 2026 Navabharath Technologies. Alle Rechte vorbehalten.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. Alle Rechte vorbehalten.",
 
         // Explore Page
         explore_banner_title: "Erkunden",
@@ -812,7 +812,7 @@ const translations = {
         footer_services: "Servizi",
         footer_contact: "Contatti",
         footer_social_title: "Seguici",
-        footer_copyright: "Â© 2026 Navabharath Technologies. Tutti i diritti riservati.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. Tutti i diritti riservati.",
 
         // Explore Page
         explore_banner_title: "Esplora",
@@ -938,7 +938,7 @@ const translations = {
         footer_services: "ServiÃ§os",
         footer_contact: "Contato",
         footer_social_title: "Siga-nos",
-        footer_copyright: "Â© 2025 Navabharath Technologies. Todos os direitos reservados.",
+        footer_copyright: "\u00A9 2026 Navabharath Technologies. Todos os direitos reservados.",
 
         // Explore Page
         explore_banner_title: "Explorar",
