@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Page
     renderJobs(jobs);
     initFilters(jobs);
+    populateJobRoleDropdown(jobs);
 
     // 2. Render Jobs Function
     function renderJobs(jobsList) {
@@ -142,7 +143,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Scroll Animations
+    // 5. Populate Job Role Dropdown
+    function populateJobRoleDropdown(jobsList) {
+        const jobRoleSelect = document.getElementById('career-job-role');
+
+        if (jobRoleSelect) {
+            // Clear existing options except the first one (placeholder)
+            while (jobRoleSelect.options.length > 1) {
+                jobRoleSelect.remove(1);
+            }
+
+            // Add job titles as options
+            jobsList.forEach(job => {
+                const option = document.createElement('option');
+                option.value = job.title;
+                option.textContent = job.title;
+                jobRoleSelect.appendChild(option);
+            });
+        }
+    }
+
+    // 6. Scroll Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

@@ -285,8 +285,10 @@
                     <input type="text" id="career-name" name="name" placeholder="Full Name" required>
                     <input type="email" id="career-email" name="email" placeholder="Email Address" required>
                     <input type="tel" id="career-phone" name="phone" placeholder="Phone Number" required>
-                    <input type="text" id="career-job-role" name="jobRole" placeholder="Applying For / Job Role"
-                        required>
+                    <select id="career-job-role" name="jobRole" required>
+                        <option value="" disabled selected>Select Job Role</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
                     <input type="number" id="career-experience" name="experience"
                         placeholder="Years of Experience (Optional)" min="0" max="50">
 
