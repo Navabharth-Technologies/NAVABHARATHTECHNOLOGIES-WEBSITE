@@ -611,6 +611,13 @@
     gap: 6px;
 }
 
+.job-summary {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--careers-text-mute);
+}
+
 .hidden {
     display: none !important;
 }

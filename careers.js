@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
                         <span><i class="fas fa-clock"></i> ${job.type}</span>
                     </div>
+                    <p class="job-summary">${job.summary}</p>
                 </div>
             `;
             container.appendChild(card);
