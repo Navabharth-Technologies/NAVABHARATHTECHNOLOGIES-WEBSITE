@@ -196,7 +196,7 @@ header.header-hidden {
 }
 
 .logo {
-    margin-right: auto;
+    margin-right: 0;
     margin-top: 1px;
 }
 
@@ -214,6 +214,13 @@ header.header-hidden {
 nav ul {
     display: flex;
     gap: 20px;
+}
+
+.nav-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
 }
 
 nav a {
@@ -1083,6 +1090,34 @@ footer {
     background: linear-gradient(135deg, #071534 0%, #02194f 100%);
     color: var(--white);
     padding: 60px 0 20px;
+    position: relative;
+}
+
+.scroll-top-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 99;
+    opacity: 0.8;
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    opacity: 1;
 }
 
 
@@ -1101,7 +1136,7 @@ footer {
     margin-left: auto;
 }
 
-.footer-container>div:nth-child(3) {
+.footer-container>div:nth-child(4) {
     margin-right: auto;
 }
 
@@ -2224,17 +2259,17 @@ footer {
     .footer-container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
         text-align: center;
         align-items: center;
-        padding-bottom: 40px;
-
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     .footer-logo {
         width: 100%;
         text-align: center !important;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         margin-right: 0;
         /* Reset margin for mobile */
         margin-left: 0;
@@ -2243,8 +2278,8 @@ footer {
     .footer-logo img {
         margin: 0 auto !important;
         height: auto !important;
-        max-height: 100px;
-        max-width: 240px;
+        max-height: 70px;
+        max-width: 180px;
         display: inline-block;
     }
 
@@ -2252,6 +2287,8 @@ footer {
         margin-left: 0 !important;
         text-align: center;
         width: 100%;
+        font-size: 0.85rem;
+        margin-top: 8px;
     }
 
     .footer-links,
@@ -2266,7 +2303,8 @@ footer {
     .footer-social h4 {
         width: 100%;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
     }
 
     .footer-links ul {
@@ -2282,13 +2320,25 @@ footer {
     .footer-links ul li {
         width: 100%;
         text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 
     .social-icons {
         justify-content: center;
         width: 100%;
-        gap: 20px;
+        gap: 12px;
         display: flex;
+        margin-left: 0;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.7rem;
     }
 
     /* Reset auto margins for mobile to prevent right-alignment */
