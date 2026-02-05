@@ -596,14 +596,45 @@
 }
 
 .filter-group select option {
-    padding: 12px;
+    padding: 14px 16px;
     background: white;
     color: #2c3e50;
     font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    margin: 4px 0;
+    transition: all 0.2s ease;
 }
 
-.filter-group select option:hover {
+.filter-group select option:hover,
+.filter-group select option:checked {
     background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #007bff;
+    font-weight: 600;
+}
+
+.filter-group select option:first-child {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* Enhance the select dropdown appearance */
+.filter-group select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.filter-group select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.filter-group select::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+    border-radius: 4px;
+}
+
+.filter-group select::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #00b8e6 100%);
 }
 
 .jobs-list {
