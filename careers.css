@@ -1355,18 +1355,39 @@
 
 /* Benefits Grid Mobile */
 .benefits-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
     gap: 16px !important;
-    padding: 0 !important;
+    padding: 0 20px 20px 20px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.benefits-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.benefits-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.benefits-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+    border-radius: 3px;
 }
 
 .benefit-item {
     padding: 28px 20px !important;
-    margin: 0 auto !important;
-    max-width: 100% !important;
+    margin: 0 !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    flex-shrink: 0 !important;
     border-radius: 12px !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
     background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%) !important;
+    scroll-snap-align: start !important;
 }
 
 .benefit-item i {
