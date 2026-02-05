@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Mysuru, India",
             "type": "Full-time",
             "remote": "On-site",
+            "experience": "0-2 years",
             "summary": "Provide exceptional technical assistance to our customers and internal teams.",
             "description": "We are looking for a Tech Support Engineer to troubleshoot and resolve technical issues for our clients. You will be the first line of defense in ensuring customer success.",
             "requirements": [
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Mysuru, India",
             "type": "Full-time",
             "remote": "Hybrid",
+            "experience": "0-2 years",
             "summary": "Execute data-driven marketing campaigns to boost our online presence.",
             "description": "As a Digital Marketing Executive, you will assist in planning, executing, and optimizing our digital marketing efforts. You will work on social media, email campaigns, and SEO.",
             "requirements": [
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span><i class="fas fa-layer-group"></i> ${job.team}</span>
                         <span><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
                         <span><i class="fas fa-clock"></i> ${job.type}</span>
+                        <span><i class="fas fa-briefcase"></i> ${job.experience}</span>
                     </div>
                     <p class="job-summary">${job.summary}</p>
                 </div>
