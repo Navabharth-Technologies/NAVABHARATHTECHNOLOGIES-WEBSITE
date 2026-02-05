@@ -1128,13 +1128,30 @@
     }
 
     .values-timeline::after {
-        left: 31px;
+        left: 20px;
     }
 
     .value-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .value-content {
+        padding: 24px 20px !important;
+        margin-left: 50px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .value-content h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .value-content p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
     }
 
     .value-item.right {
@@ -1143,7 +1160,7 @@
 
     .left::after,
     .right::after {
-        left: 21px;
+        left: 12px;
     }
 
     .process-stepper {
