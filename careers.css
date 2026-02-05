@@ -1208,7 +1208,9 @@
         width: 100%;
         text-align: center;
     }
-}/* ============================================
+}
+
+/* ============================================
    ENHANCED MOBILE RESPONSIVE STYLES
    Add these to the existing @media (max-width: 768px) block
    ============================================ */
@@ -1224,15 +1226,42 @@
     margin-bottom: 20px !important;
 }
 
-.hero-cta {
+.hero-ctas {
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 10px !important;
     width: 100% !important;
+    margin-bottom: 30px !important;
 }
 
-.hero-cta .btn {
-    width: 100% !important;
+.hero-ctas .btn {
+    width: auto !important;
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
     justify-content: center !important;
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+.btn-primary {
+    padding: 10px 24px !important;
+}
+
+.btn-secondary {
+    padding: 10px 24px !important;
+}
+
+/* Trust Strip Mobile */
+.trust-strip {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+}
+
+.trust-strip span {
+    justify-content: center !important;
+    width: 100% !important;
 }
 
 /* Stats Section Mobile */
