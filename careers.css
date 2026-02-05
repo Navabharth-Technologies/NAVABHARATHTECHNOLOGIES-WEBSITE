@@ -1208,4 +1208,188 @@
         width: 100%;
         text-align: center;
     }
+}/* ============================================
+   ENHANCED MOBILE RESPONSIVE STYLES
+   Add these to the existing @media (max-width: 768px) block
+   ============================================ */
+
+/* Hero Section Mobile Enhancements */
+.careers-hero {
+    padding: 60px 20px 40px !important;
+    min-height: 60vh !important;
+}
+
+.careers-hero p {
+    font-size: 1rem !important;
+    margin-bottom: 20px !important;
+}
+
+.hero-cta {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.hero-cta .btn {
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* Stats Section Mobile */
+.stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 30px 20px !important;
+}
+
+.stat-card {
+    padding: 20px !important;
+}
+
+.stat-number {
+    font-size: 2rem !important;
+}
+
+/* Job Listings Mobile */
+.jobs-section {
+    padding: 40px 20px !important;
+}
+
+.section-header h2 {
+    font-size: 1.8rem !important;
+}
+
+.filters {
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.filter-group {
+    width: 100% !important;
+}
+
+.filter-group select {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+}
+
+.jobs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+}
+
+.job-info h3 {
+    font-size: 1.2rem !important;
+}
+
+.job-meta {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: flex-start !important;
+}
+
+.job-summary {
+    font-size: 0.9rem !important;
+}
+
+/* Career Application Form Mobile */
+.talent-section {
+    padding: 40px 20px !important;
+}
+
+.talent-form {
+    padding: 30px 20px !important;
+}
+
+.talent-form input,
+.talent-form select,
+.talent-form textarea {
+    font-size: 16px !important;
+    /* Prevents zoom on iOS */
+    padding: 14px 12px !important;
+}
+
+.talent-form select {
+    padding-right: 36px !important;
+    background-position: right 12px center !important;
+}
+
+.file-upload-label {
+    padding: 16px !important;
+    font-size: 0.95rem !important;
+}
+
+.file-upload-label i {
+    font-size: 1.8rem !important;
+}
+
+.talent-form button[type="submit"] {
+    width: 100% !important;
+    padding: 16px !important;
+    font-size: 1rem !important;
+}
+
+/* Form Messages Mobile */
+.form-message {
+    padding: 14px !important;
+    font-size: 0.9rem !important;
+}
+
+/* General Spacing */
+section {
+    padding: 40px 20px !important;
+}
+
+/* Touch-Friendly Buttons */
+.btn {
+    min-height: 44px !important;
+    /* iOS recommended touch target */
+    padding: 12px 24px !important;
+}
+
+/* Accordion Mobile */
+.accordion-header {
+    padding: 16px !important;
+    font-size: 1rem !important;
+}
+
+.accordion-content {
+    padding: 16px !important;
+    font-size: 0.9rem !important;
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .careers-hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .careers-hero p {
+        font-size: 0.95rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.75rem !important;
+    }
+
+    .job-info h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .talent-form {
+        padding: 20px 16px !important;
+    }
+
+    .form-message {
+        font-size: 0.85rem !important;
+    }
+
+    .btn {
+        font-size: 0.9rem !important;
+        padding: 10px 20px !important;
+    }
 }
