@@ -1284,6 +1284,39 @@
     width: 100% !important;
 }
 
+/* Benefits Grid Mobile */
+.benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 !important;
+}
+
+.benefit-item {
+    padding: 28px 20px !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%) !important;
+}
+
+.benefit-item i {
+    font-size: 2.5rem !important;
+    margin-bottom: 16px !important;
+}
+
+.benefit-item h4 {
+    font-size: 1.25rem !important;
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
+}
+
+.benefit-item p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+}
+
 /* Stats Section Mobile */
 .stats-grid {
     grid-template-columns: 1fr !important;
