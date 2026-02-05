@@ -1355,8 +1355,8 @@
 
 /* Benefits Grid Mobile */
 .benefits-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
     padding: 0 !important;
 }
 
