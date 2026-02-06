@@ -1,4 +1,4 @@
-﻿// Translation data
+// Translation data
 const translations = {
     en: {
         // Navigation
