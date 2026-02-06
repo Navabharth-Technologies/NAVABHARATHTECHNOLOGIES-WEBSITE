@@ -4,6 +4,7 @@ const translations = {
         // Navigation
         nav_home: "Home",
         nav_about: "About Us",
+        nav_careers: "Careers",
         nav_services: "Services",
         nav_resources: "Resources",
         nav_contact: "Contact",
@@ -1037,6 +1038,7 @@ const translations = {
         // Navigation
         nav_home: "الرئيسية",
         nav_about: "من نحن",
+        nav_careers: "الوظائف",
         nav_services: "الخدمات",
         nav_resources: "الموارد",
         nav_contact: "اتصل بنا",
@@ -1275,6 +1277,7 @@ const translations = {
     kn: {
         nav_home: "ಮುಖಪುಟ",
         nav_about: "ನಮ್ಮ ಬಗ್ಗೆ",
+        nav_careers: "ವೃತ್ತಿ",
         nav_services: "ಸೇವೆಗಳು",
         nav_resources: "ಸಂಪನ್ಮೂಲಗಳು",
         nav_contact: "ಸಂಪರ್ಕಿಸಿ",
