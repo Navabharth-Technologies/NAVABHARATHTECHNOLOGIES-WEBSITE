@@ -1,63 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Job Data (Inlined to avoid CORS issues when opening locally)
-    const jobs = [
-        {
-            "id": "tech-support",
-            "title": "Tech Support Engineer",
-            "team": "Support",
-            "location": "Mysuru, India",
-            "type": "Full-time",
-            "remote": "On-site",
-            "experience": "0-2 years",
-            "summary": "Provide exceptional technical assistance to our customers and internal teams.",
-            "description": "We are looking for a Tech Support Engineer to troubleshoot and resolve technical issues for our clients. You will be the first line of defense in ensuring customer success.",
-            "requirements": [
-                "2+ years of experience in technical support or similar role",
-                "Strong problem-solving and communication skills",
-                "Familiarity with help desk software (Zendesk, Freshdesk)",
-                "Basic understanding of networking and OS troubleshooting"
-            ],
-            "niceToHave": [
-                "Experience with cloud services (AWS/Azure)",
-                "Knowledge of SQL",
-                "Certification in IT support (CompTIA A+)"
-            ],
-            "benefits": [
-                "Competitive salary",
-                "Shift allowances",
-                "Health insurance",
-                "Career growth opportunities"
-            ]
-        },
-        {
-            "id": "digital-marketing-executive",
-            "title": "Digital Marketing Executive",
-            "team": "Marketing",
-            "location": "Mysuru, India",
-            "type": "Full-time",
-            "remote": "Hybrid",
-            "experience": "0-2 years",
-            "summary": "Execute data-driven marketing campaigns to boost our online presence.",
-            "description": "As a Digital Marketing Executive, you will assist in planning, executing, and optimizing our digital marketing efforts. You will work on social media, email campaigns, and SEO.",
-            "requirements": [
-                "1-3 years of experience in digital marketing",
-                "Experience with social media management tools",
-                "Basic SEO and SEM knowledge",
-                "Good copywriting skills"
-            ],
-            "niceToHave": [
-                "Google Analytics certification",
-                "Experience with Canva or Photoshop",
-                "Blog writing experience"
-            ],
-            "benefits": [
-                "Performance incentives",
-                "Flexible work environment",
-                "Mentorship from senior leads",
-                "Annual team retreat"
-            ]
-        }
-    ];
+    const jobs = [];
 
     // Initialize Page
     renderJobs(jobs);
