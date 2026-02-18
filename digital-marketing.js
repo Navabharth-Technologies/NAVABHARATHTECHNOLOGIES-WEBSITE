@@ -504,3 +504,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* ==========================================
+   COOKIE CONSENT BANNER
+   ========================================== */
+/* ==========================================
+   COOKIE CONSENT BANNER (DISABLED)
+   ========================================== */
+// (function () {
+//     // Banner removed as per requirement: Show only on Home Page.
+// })();

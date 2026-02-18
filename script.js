@@ -3,7 +3,7 @@ const translations = {
     en: {
         // Navigation
         nav_home: "Home",
-        nav_about: "About Us",
+        nav_about: "About",
         nav_careers: "Careers",
         nav_services: "Services",
         nav_resources: "Resources",
@@ -1382,19 +1382,21 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(currentLang);
 
     // Toggle dropdown (with ARIA)
-    langBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = langDropdown.classList.toggle('active');
-        langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+    if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = langDropdown.classList.toggle('active');
+            langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
-            langDropdown.classList.remove('active');
-            if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
-        }
-    });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (langBtn && langDropdown && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('active');
+                if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
 
     // Language selection
     langOptions.forEach(option => {
@@ -1409,7 +1411,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update language function
     function updateLanguage(lang) {
         currentLang = lang;
-        currentLangSpan.textContent = langCodes[lang];
+        if (currentLangSpan) {
+            currentLangSpan.textContent = langCodes[lang];
+        }
 
         // Update active state in dropdown
         langOptions.forEach(option => {
@@ -1445,13 +1449,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom Notification Function
     function showNotification(message, type = 'success') {
         const notification = document.getElementById('customNotification');
-        notification.textContent = message;
-        notification.className = `custom-notification ${type} show`;
+        if (notification) {
+            notification.textContent = message;
+            notification.className = `custom-notification ${type} show`;
 
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-            notification.classList.remove('show');
-        }, 5000);
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+        }
     }
 
     // Form submission handler
@@ -2237,4 +2243,120 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* ==========================================
+   COOKIE CONSENT BANNER
+   ========================================== */
+(function () {
+    const consentKey = 'cookieConsent';
 
+    // 1. Restriction: Home Page Only
+    // Only run if path is root or index.html
+    const path = window.location.pathname;
+    if (path.includes('.html') && !path.includes('index.html')) {
+        return;
+    }
+
+    // 2. Persistence: Check if user already consented/rejected
+    if (localStorage.getItem(consentKey)) {
+        return;
+    }
+
+    // 2. Inject CSS
+    const style = document.createElement('style');
+    style.innerHTML = `
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            font-family: 'Inter', sans-serif;
+            border-top: 1px solid #eee;
+            animation: slideUp 0.5s ease-out;
+        }
+        @media (min-width: 768px) {
+            #cookie-consent-banner {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 5%;
+            }
+        }
+        #cookie-consent-text {
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 800px;
+        }
+        @media (min-width: 768px) {
+            #cookie-consent-text {
+                margin-bottom: 0;
+                text-align: left;
+                margin-right: 20px;
+            }
+        }
+        .cookie-btn-group {
+            display: flex;
+            gap: 10px;
+        }
+        .cookie-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            transition: opacity 0.2s;
+        }
+        .cookie-btn:hover {
+            opacity: 0.9;
+        }
+        .cookie-accept {
+            background-color: #1a3c87; /* Primary color from style.css */
+            color: white;
+        }
+        .cookie-reject {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // 3. Inject HTML
+    const banner = document.createElement('div');
+    banner.id = 'cookie-consent-banner';
+    banner.innerHTML = `
+        <div id="cookie-consent-text">
+            We use cookies to improve your experience. By using our site, you agree to our use of cookies.
+        </div>
+        <div class="cookie-btn-group">
+            <button id="cookie-reject-btn" class="cookie-btn cookie-reject">Reject</button>
+            <button id="cookie-accept-btn" class="cookie-btn cookie-accept">Accept</button>
+        </div>
+    `;
+    document.body.appendChild(banner);
+
+    // 4. Event Listeners
+    document.getElementById('cookie-accept-btn').addEventListener('click', function () {
+        localStorage.setItem(consentKey, 'accepted');
+        banner.style.display = 'none';
+        // Optional: Trigger any tracking scripts here if needed
+    });
+
+    document.getElementById('cookie-reject-btn').addEventListener('click', function () {
+        localStorage.setItem(consentKey, 'rejected');
+        banner.style.display = 'none';
+    });
+})();

@@ -41,6 +41,7 @@
     --font-family: 'Inter', sans-serif;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -192,7 +193,7 @@ header.header-hidden {
 .header-container {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 15px;
 }
 
 .logo {
@@ -213,14 +214,14 @@ header.header-hidden {
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-menu {
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
 nav a {
@@ -742,6 +743,10 @@ nav a {
         order: 4;
         width: 100%;
     }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
 }
 
 .about-image {
@@ -786,7 +791,7 @@ nav a {
 }
 
 .about-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 20px;
     font-weight: 700;
@@ -2654,4 +2659,38 @@ footer {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* Highlight Card Style for Blog */
+.highlight-card {
+    background: linear-gradient(135deg, #f8f0ff 0%, #ffffff 100%);
+    border: 1px solid rgba(142, 68, 173, 0.1);
+    border-left: 5px solid #8e44ad;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card h2 {
+    margin-top: 0 !important;
+    color: #8e44ad;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    margin-bottom: 0;
+    color: #444;
+}
+
+.blog-content-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
