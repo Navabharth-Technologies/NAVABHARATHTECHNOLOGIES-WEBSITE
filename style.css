@@ -2398,6 +2398,132 @@ footer {
 }
 
 /* =========================================
+   Our Projects Section
+   ========================================= */
+.projects-section {
+    padding: 80px 0;
+    background: linear-gradient(160deg, #f0f4ff 0%, #ffffff 60%, #f9faff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.projects-bg-shape.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(26, 60, 135, 0.07);
+    top: -100px;
+    right: -80px;
+    animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+.projects-bg-shape.shape-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(102, 126, 234, 0.08);
+    bottom: -80px;
+    left: -60px;
+    animation: floatOrb 9s ease-in-out infinite alternate-reverse;
+}
+
+.projects-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Marquee outer — clips and adds edge fade */
+.projects-marquee {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    /* Fade edges for a polished look */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* Pause on hover */
+.projects-marquee:hover .projects-marquee-track {
+    animation-play-state: paused;
+}
+
+/* Track — all logos in one row, animates left */
+.projects-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    width: max-content;
+    animation: marqueeScroll 20s linear infinite;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Each logo slot — transparent, just centres the image */
+.project-logo-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.project-logo-slot:hover {
+    transform: scale(1.1);
+}
+
+/* Logo image — natural size, capped */
+.project-logo-img {
+    display: block;
+    max-width: 150px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.project-logo-slot:hover .project-logo-img {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .projects-marquee-track {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 580px) {
+    .projects-marquee-track {
+        gap: 24px;
+        animation-duration: 15s;
+    }
+
+    .project-logo-img {
+        max-width: 110px;
+        max-height: 90px;
+    }
+
+    .projects-section {
+        padding: 60px 0;
+    }
+}
+
+/* =========================================
    Unique Clients Section (Infinite Marquee)
    ========================================= */
 .clients-section {
