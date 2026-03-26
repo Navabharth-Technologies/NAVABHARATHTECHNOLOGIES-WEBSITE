@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family: 'Inter';
     src: url('fonts/Inter.woff2') format('woff2');
     font-weight: normal;
@@ -239,6 +239,31 @@ nav a {
     font-size: 1.05rem;
     line-height: 1.2;
     letter-spacing: 0.2px;
+}
+
+/* Contact CTA Button in Header */
+.btn-contact-cta {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 20px !important;
+    border-radius: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.btn-contact-cta:hover {
+    background-color: #132d66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 60, 135, 0.2);
+}
+
+@media (max-width: 768px) {
+    .btn-contact-cta {
+        padding: 12px 24px !important;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 /* Search Bar */
@@ -2058,12 +2083,12 @@ footer {
 }
 
 .carousel-slide.active {
-    display: block;
+    display: block !important;
 }
 
 @keyframes fadeEffect {
     from {
-        opacity: 0.4;
+        opacity: 0;
     }
 
     to {
@@ -2819,4 +2844,49 @@ footer {
     margin: 30px auto;
     display: block;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- UI Enhancements Update --- */
+/* Font Hierarchy */
+h1, .hero-content h1 { font-size: 3rem !important; }
+h2, .section-header h2, .about-content h2, .contact-info h2 { font-size: 2.5rem !important; margin-bottom: 24px !important; }
+h3, .service-card h3 { font-size: 1.75rem !important; margin-bottom: 16px !important; }
+p, .hero-content p, .about-content p, .service-card p { line-height: 1.7 !important; }
+
+/* Spacing */
+section, .hero, .about, .services, .contact, .clients-section, .projects-section, .why-choose-us {
+    padding: 80px 0 !important;
+}
+.services-grid { gap: 30px !important; }
+
+/* Subtle Animations */
+.service-card, .feature-item, .client-card, .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.service-card:hover, .feature-item:hover, .client-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+.btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1, .hero-content h1 { font-size: 2.2rem !important; }
+    h2, .section-header h2, .about-content h2, .contact-info h2 { font-size: 1.8rem !important; }
+    h3, .service-card h3 { font-size: 1.4rem !important; }
+    
+    section, .hero, .about, .services, .contact, .clients-section, .projects-section, .why-choose-us {
+        padding: 50px 0 !important;
+    }
+}
+@media (max-width: 480px) {
+    h1, .hero-content h1 { font-size: 1.8rem !important; }
+    h2, .section-header h2, .about-content h2, .contact-info h2 { font-size: 1.5rem !important; }
+    
+    section, .hero, .about, .services, .contact, .clients-section, .projects-section, .why-choose-us {
+        padding: 40px 0 !important;
+    }
 }

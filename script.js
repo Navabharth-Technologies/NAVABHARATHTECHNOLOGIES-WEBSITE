@@ -1709,17 +1709,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hero Carousel Functionality
     const carouselSlides = document.querySelectorAll('.carousel-slide');
-    if (carouselSlides.length > 0) {
+    console.log('Hero Carousel: found', carouselSlides.length, 'slides');
+    
+    if (carouselSlides.length > 1) {
         let currentSlide = 0;
         const slideInterval = 4000; // 4 seconds
 
         function nextSlide() {
+            console.log('Hero Carousel: transitioning from slide', currentSlide);
             carouselSlides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % carouselSlides.length;
             carouselSlides[currentSlide].classList.add('active');
+            console.log('Hero Carousel: now on slide', currentSlide);
         }
 
         setInterval(nextSlide, slideInterval);
+    } else if (carouselSlides.length === 1) {
+        console.log('Hero Carousel: only 1 slide found, no transition needed');
     }
 
     // Mobile Menu Toggle

@@ -17,16 +17,25 @@
     "author": "Navabharath Technologies",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.18.2",
-        "cors": "^2.8.5",
         "body-parser": "^1.20.2",
-        "resend": "^3.0.0",
-        "multer": "^1.4.5-lts.1"
+        "cors": "^2.8.5",
+        "express": "^4.22.1",
+        "multer": "^1.4.5-lts.1",
+        "resend": "^3.0.0"
     },
     "devDependencies": {
         "nodemon": "^3.0.1"
     },
     "engines": {
         "node": ">=14.0.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Navabharath-Technologies/NAVABHARATHTECHNOLOGIES-WEBSITE.git"
+    },
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Navabharath-Technologies/NAVABHARATHTECHNOLOGIES-WEBSITE/issues"
+    },
+    "homepage": "https://github.com/Navabharath-Technologies/NAVABHARATHTECHNOLOGIES-WEBSITE#readme"
 }
