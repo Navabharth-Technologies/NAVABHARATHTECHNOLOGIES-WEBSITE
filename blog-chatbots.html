@@ -42,9 +42,32 @@
 
     <style>
         .blog-post-content {
-            padding: 60px 0;
+            padding: 100px 0 60px !important;
             max-width: 950px;
             margin: 0 auto;
+        }
+
+        .blog-post-title-container {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .blog-post-main-title {
+            font-family: 'DM Serif Text', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-main-title {
+                font-size: 2rem;
+            }
         }
 
         .blog-post-header {
@@ -119,25 +142,52 @@
 
 <body>
 
-    <!-- Header / Navbar -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" loading="eager" width="180" height="70">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="index.html#contact" class="btn-contact-cta">Contact</a></li>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
             </div>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -147,14 +197,10 @@
 
     <main class="page-content">
         <article class="container blog-post-content">
-            <header class="blog-post-header">
-                <h1 data-translate="blog_cb_title">Chatbots vs Human Support : Whatâ€™s Best for Your Business?</h1>
-                <div class="blog-meta-single">
-                    <span><i class="far fa-calendar-alt"></i> <span data-translate="blog_cb_date">Dec 15,
-                            2025</span></span>
-                    <span><i class="far fa-user"></i> <span data-translate="blog_cb_author">Tech Team</span></span>
-                </div>
-            </header>
+
+            <div class="blog-post-title-container">
+                <h1 class="blog-post-main-title">How Chatbots are Changing the Face of Customer Support</h1>
+            </div>
 
             <img src="assets/chatbot-vs-human-header.png" alt="Chatbots vs Human Support Brain Concept"
                 class="blog-featured-image" loading="eager">
@@ -201,11 +247,11 @@
                 <p style="font-style: italic; color: #1a3c87; font-weight: 500; line-height: 1.8;"
                     data-translate="blog_cb_quote">
                     "Imagine a world where your customers never have to wait. It's 2 AM, and a frustrated user needs a
-                    quick answerâ€”your chatbot is there instantly, a tireless digital guardian awake while the city
-                    sleeps. But when the problem gets tough, thatâ€™s when the human touch steps in. Like a skilled
+                    quick answer—your chatbot is there instantly, a tireless digital guardian awake while the city
+                    sleeps. But when the problem gets tough, that's when the human touch steps in. Like a skilled
                     diplomat, your human agent takes over, bringing empathy and deep understanding to complex issues
-                    that code simply cannot solve. This powerful duoâ€”the speed of automation and the warmth of
-                    humanityâ€”creates a support experience that doesn't just solve problems, but builds lasting trust."
+                    that code simply cannot solve. This powerful duo—the speed of automation and the warmth of
+                    humanity—creates a support experience that doesn't just solve problems, but builds lasting trust."
                 </p>
 
                 <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
@@ -216,14 +262,14 @@
                 <p><strong data-translate="blog_cb_key_adv">Key Advantages</strong></p>
 
                 <h3 data-translate="blog_cb_h3_6">1. Empathy & Emotional Understanding</h3>
-                <p data-translate="blog_cb_p7">Human agents offer something chatbots cannotâ€”real emotional connection.
+                <p data-translate="blog_cb_p7">Human agents offer something chatbots cannot—real emotional connection.
                     They can sense frustration,
                     happiness or confusion through tone & conversation flow. This helps customers feel understood,
                     especially during stressful or sensitive issues. Empathy builds trust, reduces conflict & makes the
                     customer feel valued as a person, not just another ticket.</p>
 
                 <h3 data-translate="blog_cb_h3_7">2. Personalized Problem Solving</h3>
-                <p data-translate="blog_cb_p8">Humans are naturally creative thinkers. They can analyze a customerâ€™s
+                <p data-translate="blog_cb_p8">Humans are naturally creative thinkers. They can analyze a customer's
                     issue from multiple angles, ask
                     clarifying questions & suggest flexible solutions tailored to individual needs. This is helpful when
                     problems do not follow a standard script. Personalized responses reassure customers that their
@@ -246,9 +292,9 @@
                 <h3 data-translate="blog_cb_h3_10">5. Cultural Understanding & Language Nuance</h3>
                 <p data-translate="blog_cb_p11">Human agents naturally understand tone, slang, regional expressions &
                     cultural sensitivities. This
-                    ensures smoother communication & avoids misunderstandings that bots often face. Whether itâ€™s
+                    ensures smoother communication & avoids misunderstandings that bots often face. Whether it's
                     adjusting language formality or understanding local behavior patterns, humans can adapt
-                    instantlyâ€”making the experience more natural & respectful.</p>
+                    instantly—making the experience more natural & respectful.</p>
 
                 <h2 data-translate="blog_cb_conclusion_title">CONCLUSION</h2>
                 <img src="assets/chatbot-human-handshake.png" alt="Chatbot and Human Handshake"

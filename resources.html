@@ -119,6 +119,7 @@
         .resource-card:hover {
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             z-index: 10;
+            cursor: pointer;
         }
 
         .resource-card h3 {
@@ -157,9 +158,12 @@
             transition: color 0.3s ease;
         }
 
-        .resource-link:hover {
+        .resource-link:hover,
+        .resource-card:hover .resource-link {
             color: var(--secondary-color);
         }
+
+
 
         .resource-link i {
             margin-left: 5px;
@@ -182,15 +186,16 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" loading="eager" width="180" height="70">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
@@ -252,6 +257,7 @@
         <div class="resources-grid">
             <!-- Resource 1 -->
             <div class="resource-card">
+                <a href="explore.html" class="full-card-link" aria-label="View Documentation"></a>
                 <span class="card-tag">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -261,12 +267,13 @@
                 <h3 data-translate="resource_card1_title">Documentation</h3>
                 <p data-translate="resource_card1_desc">Comprehensive guides and technical documentation for our
                     services and solutions. Learn how to integrate and maximize the value of our technology.</p>
-                <a href="#" class="resource-link"><span data-translate="resource_view_btn">View Documentation</span> <i
+                <a href="explore.html" class="resource-link"><span data-translate="resource_view_btn">View Documentation</span> <i
                         class="fas fa-arrow-right"></i></a>
             </div>
 
             <!-- Resource 2 -->
             <div class="resource-card">
+                <a href="blog.html" class="full-card-link" aria-label="Read Blog"></a>
                 <img src="assets/Blogs.jpg" alt="Blog & Insights" loading="lazy">
                 <h3 data-translate="resource_card2_title">Blog & Insights</h3>
                 <p data-translate="resource_card2_desc">Stay updated with the latest trends, tips, and insights from our
@@ -277,6 +284,7 @@
 
             <!-- Resource 3 -->
             <div class="resource-card">
+                <a href="https://www.youtube.com/@NavabharathTechnologies" class="full-card-link" target="_blank" rel="noopener noreferrer" aria-label="Watch Videos"></a>
                 <span class="card-tag">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -286,12 +294,13 @@
                 <h3 data-translate="resource_card3_title">Video Tutorials</h3>
                 <p data-translate="resource_card3_desc">Watch step-by-step video tutorials and webinars covering various
                     topics from development to deployment and optimization.</p>
-                <a href="#" class="resource-link"><span data-translate="resource_watch_btn">Watch Videos</span> <i
+                <a href="https://www.youtube.com/@NavabharathTechnologies" class="resource-link" target="_blank" rel="noopener noreferrer"><span data-translate="resource_watch_btn">Watch Videos</span> <i
                         class="fas fa-arrow-right"></i></a>
             </div>
 
             <!-- Resource 4 -->
             <div class="resource-card">
+                <a href="#" class="full-card-link" aria-label="Get Downloads"></a>
                 <span class="card-tag">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -307,6 +316,7 @@
 
             <!-- Resource 5 -->
             <div class="resource-card">
+                <a href="#" class="full-card-link" aria-label="View FAQ"></a>
                 <span class="card-tag">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -322,6 +332,7 @@
 
             <!-- Resource 6 -->
             <div class="resource-card">
+                <a href="#" class="full-card-link" aria-label="Explore Tools"></a>
                 <span class="card-tag">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>

@@ -90,6 +90,7 @@
         .blog-card:hover {
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2), 0 0 20px rgba(26, 60, 135, 0.2);
             z-index: 100;
+            cursor: pointer;
         }
 
         /* Glare effect overlay */
@@ -191,10 +192,21 @@
             transition: all 0.3s ease;
         }
 
-        .read-more-btn:hover {
+        .read-more-btn:hover,
+        .blog-card:hover .read-more-btn {
             background: #132d66;
             transform: translateZ(35px) scale(1.05);
             gap: 12px;
+        }
+
+        .full-card-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            cursor: pointer;
         }
 
         /* Upcoming / Coming Soon styling - Unique Futuristic Design */
@@ -311,15 +323,16 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" loading="lazy">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
@@ -379,30 +392,85 @@
     <main class="container page-content">
 
         <div class="blog-grid">
-            <!-- Blog Post 1 -->
+            <!-- Blog Post 6 (Formerly Upcoming 3) -->
             <article class="blog-card">
+                <a href="blog-testing-approaches.html" class="full-card-link" aria-label="Read Manual Testing vs Automation Testing"></a>
                 <div class="blog-image">
-                    <img src="assets/chatbot-card-thumb.png" alt="AI in Business" loading="lazy">
+                    <img src="assets/testing%2011.png" alt="Manual vs Automation Testing" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Dec 15, 2025</span>
-                        <span><i class="far fa-user"></i> Tech Team</span>
+                        <span><i class="far fa-calendar-alt"></i> Feb 21, 2026</span>
+                        <span><i class="far fa-user"></i> Growth Team</span>
                     </div>
-                    <h3 class="blog-title" data-translate="blog_post1_title">Chatbots vs Human Support : Whatâ€™s Best
-                        for
-                        Your Business?
-                    </h3>
-                    <p class="blog-excerpt" data-translate="blog_post1_excerpt">Explore how chatbots and human support
-                        are reshaping customer serviceâ€”and
-                        learn which approach works best for your business..</p>
-                    <a href="blog-chatbots.html" class="read-more-btn"><span data-translate="read_more">Read More</span>
-                        <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="blog-title">Manual Testing vs Automation Testing: Which Approach Works Best in Real Projects?</h3>
+                    <p class="blog-excerpt">Software testing plays a critical role in delivering reliable and high-quality applications. Understand the differences between manual testing vs automation testing to choose the right strategy.</p>
+                    <a href="blog-testing-approaches.html" class="read-more-btn"><span>Read More</span> <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 (Formerly Upcoming 2) -->
+            <article class="blog-card">
+                <a href="blog-erp-crm-roi.html" class="full-card-link" aria-label="Read ROI of Custom ERP/CRM"></a>
+                <div class="blog-image">
+                    <img src="assets/roi.png" alt="Custom ERP/CRM" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Feb 15, 2026</span>
+                        <span><i class="far fa-user"></i> Strategy Team</span>
+                    </div>
+                    <h3 class="blog-title">The ROI of Custom ERP/CRM Solutions</h3>
+                    <p class="blog-excerpt">Investing in custom ERP and CRM development can reduce operational waste,
+                        improve sales visibility, and unify data.</p>
+                    <a href="blog-erp-crm-roi.html" class="read-more-btn"><span>Read More</span> <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 (Formerly Upcoming 1) -->
+            <article class="blog-card">
+                <a href="blog-cloud-security.html" class="full-card-link" aria-label="Read AI Agents Quantum Leap"></a>
+                <div class="blog-image">
+                    <img src="assets/quantum-leap-hero-v2.jpg" alt="AI Agents Quantum Leap" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Jan 29, 2026</span>
+                        <span><i class="far fa-user"></i> Security Team</span>
+                    </div>
+                    <h3 class="blog-title">Quantum Leap: AI Agents Will Change How Software Services Work in 2030</h3>
+                    <p class="blog-excerpt">In 2030, software services won't just do what you ask them to; they'll also
+                        be
+                        able to guess what you need, make decisions, and get better all the time.</p>
+                    <a href="blog-cloud-security.html" class="read-more-btn"><span>Read More</span> <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <a href="blog-web-development.html" class="full-card-link" aria-label="Read Why Is Page Speed Optimization So Important"></a>
+                <div class="blog-image">
+                    <img src="assets/page-speed-optimization.png" alt="Page Speed Optimization" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Jan 07, 2026</span>
+                        <span><i class="far fa-user"></i> Web Dev Team</span>
+                    </div>
+                    <h3 class="blog-title">Why Is Page Speed Optimization So Important in 2026?</h3>
+                    <p class="blog-excerpt">In 2026, website speed is no longer optional. Learn how fast-loading pages
+                        impact SEO performance, user experience, and conversion rates.</p>
+                    <a href="blog-web-development.html" class="read-more-btn"><span data-translate="read_more">Read
+                            More</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
             <!-- Blog Post 2 -->
             <article class="blog-card">
+                <a href="blog-freshers-job.html" class="full-card-link" aria-label="Read 10 Proven Techniques for Freshers"></a>
                 <div class="blog-image">
                     <img src="assets/fresher-career-guide.png" alt="Fresher Career Guide" loading="lazy">
                 </div>
@@ -422,76 +490,26 @@
                 </div>
             </article>
 
-            <!-- Blog Post 3 -->
+            <!-- Blog Post 1 -->
             <article class="blog-card">
+                <a href="blog-chatbots.html" class="full-card-link" aria-label="Read Chatbots vs Human Support"></a>
                 <div class="blog-image">
-                    <img src="assets/page-speed-optimization.png" alt="Page Speed Optimization" loading="lazy">
+                    <img src="assets/chatbot-card-thumb.png" alt="AI in Business" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Jan 07, 2026</span>
-                        <span><i class="far fa-user"></i> Web Dev Team</span>
+                        <span><i class="far fa-calendar-alt"></i> Dec 15, 2025</span>
+                        <span><i class="far fa-user"></i> Tech Team</span>
                     </div>
-                    <h3 class="blog-title">Why Is Page Speed Optimization So Important in 2026?</h3>
-                    <p class="blog-excerpt">In 2026, website speed is no longer optional. Learn how fast-loading pages
-                        impact SEO performance, user experience, and conversion rates.</p>
-                    <a href="blog-web-development.html" class="read-more-btn"><span data-translate="read_more">Read
-                            More</span> <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Upcoming Post 1 -->
-            <!-- Quantum Leap AI Agents Post -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/quantum-leap-hero-v2.jpg" alt="AI Agents Quantum Leap" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Jan 29, 2026</span>
-                        <span><i class="far fa-user"></i> Security Team</span>
-                    </div>
-                    <h3 class="blog-title">Quantum Leap: AI Agents Will Change How Software Services Work in 2030</h3>
-                    <p class="blog-excerpt">In 2030, software services won't just do what you ask them to; they'll also
-                        be
-                        able to guess what you need, make decisions, and get better all the time.</p>
-                    <a href="blog-cloud-security.html" class="read-more-btn"><span>Read More</span> <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Upcoming Post 2 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/roi.png" alt="Custom ERP/CRM" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Feb 15, 2026</span>
-                        <span><i class="far fa-user"></i> Strategy Team</span>
-                    </div>
-                    <h3 class="blog-title">The ROI of Custom ERP/CRM Solutions</h3>
-                    <p class="blog-excerpt">Investing in custom ERP and CRM development can reduce operational waste,
-                        improve sales visibility, and unify data.</p>
-                    <a href="blog-erp-crm-roi.html" class="read-more-btn"><span>Read More</span> <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Upcoming Post 3 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/testing%2011.png" alt="Manual vs Automation Testing" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Feb 21, 2026</span>
-                        <span><i class="far fa-user"></i> Growth Team</span>
-                    </div>
-                    <h3 class="blog-title">Manual Testing vs Automation Testing: Which Approach Works Best in Real Projects?</h3>
-                    <p class="blog-excerpt">Software testing plays a critical role in delivering reliable and high-quality applications. Understand the differences between manual testing vs automation testing to choose the right strategy.</p>
-                    <a href="blog-testing-approaches.html" class="read-more-btn"><span>Read More</span> <i
-                            class="fas fa-arrow-right"></i></a>
+                    <h3 class="blog-title" data-translate="blog_post1_title">Chatbots vs Human Support: What's Best
+                        for
+                        Your Business?
+                    </h3>
+                    <p class="blog-excerpt" data-translate="blog_post1_excerpt">Explore how chatbots and human support
+                        are reshaping customer service—and
+                        learn which approach works best for your business..</p>
+                    <a href="blog-chatbots.html" class="read-more-btn"><span data-translate="read_more">Read More</span>
+                        <i class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
         </div>

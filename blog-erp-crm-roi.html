@@ -37,9 +37,32 @@
 
     <style>
         .blog-post-content {
-            padding: 60px 0;
+            padding: 100px 0 60px !important;
             max-width: 950px;
             margin: 0 auto;
+        }
+
+        .blog-post-title-container {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .blog-post-main-title {
+            font-family: 'DM Serif Text', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-main-title {
+                font-size: 2rem;
+            }
         }
 
         .blog-post-header {
@@ -118,28 +141,54 @@
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Header / Navbar -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" loading="eager" width="180" height="70">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="index.html#contact" class="btn-contact-cta">Contact</a></li>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
             </div>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -149,13 +198,10 @@
 
     <main class="page-content">
         <article class="container blog-post-content">
-            <header class="blog-post-header">
-                <h1>The ROI of Custom ERP/CRM Solutions: Why Businesses See Long-Term Gains</h1>
-                <div class="blog-meta-single">
-                    <span><i class="far fa-calendar-alt"></i> Feb 15, 2026</span>
-                    <span><i class="far fa-user"></i> Business Strategy Team</span>
-                </div>
-            </header>
+
+            <div class="blog-post-title-container">
+                <h1 class="blog-post-main-title">Custom ERP and CRM Development ROI: A High-Intent Guide for Business Owners</h1>
+            </div>
 
             <img src="assets/roi.png" alt="Custom ERP & CRM Development ROI Guide" class="blog-featured-image"
                 loading="eager">

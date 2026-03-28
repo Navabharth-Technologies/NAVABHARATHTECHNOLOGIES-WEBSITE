@@ -28,26 +28,53 @@
 </head>
 
 <body>
-    <!-- Header (Reused) -->
+    <!-- Header / Navbar -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
-                        loading="eager">
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html" class="active">Careers</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers" class="active">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
             </div>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>

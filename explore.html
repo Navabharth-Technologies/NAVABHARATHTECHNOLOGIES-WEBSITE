@@ -134,15 +134,16 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" loading="eager" width="180" height="70">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <nav>
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
@@ -167,7 +168,8 @@
                 </div>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
                 <button class="search-btn" id="searchBtn" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
