@@ -312,6 +312,7 @@
             box-shadow: none;
         }
     </style>
+    <link rel="preload" as="image" href="assets/Blogs.jpg" fetchpriority="high">
 </head>
 
 <body>
@@ -375,7 +376,7 @@
     <!-- Hero Banner for Blog -->
     <div class="explore-banner"
         style="margin-top: 0; position: relative; width: 100%; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/Blogs.jpg" alt="Blog Banner" loading="lazy"
+        <img fetchpriority="high" src="assets/Blogs.jpg" alt="Blog Banner" loading="eager"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(26,60,135,0.8)); z-index: 1;">
@@ -392,6 +393,24 @@
     <main class="container page-content">
 
         <div class="blog-grid">
+            <!-- Blog Post 7 -->
+            <article class="blog-card">
+                <a href="blog-cloud-innovation.html" class="full-card-link" aria-label="Read Cloud Computing Innovation"></a>
+                <div class="blog-image">
+                    <img src="assets/Cloud%20Computing.png" alt="Cloud Computing Innovation" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> April 08, 2026</span>
+                        <span><i class="far fa-user"></i> Tech Team</span>
+                    </div>
+                    <h3 class="blog-title">Cloud Computing: The Backbone of Modern Innovation</h3>
+                    <p class="blog-excerpt">Discover how cloud computing is driving digital transformation, enhancing agility, and enabling businesses to innovate faster than ever before.</p>
+                    <a href="blog-cloud-innovation.html" class="read-more-btn"><span>Read More</span> <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
             <!-- Blog Post 6 (Formerly Upcoming 3) -->
             <article class="blog-card">
                 <a href="blog-testing-approaches.html" class="full-card-link" aria-label="Read Manual Testing vs Automation Testing"></a>
@@ -568,7 +587,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

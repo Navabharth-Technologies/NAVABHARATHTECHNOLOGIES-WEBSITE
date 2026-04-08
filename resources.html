@@ -164,7 +164,6 @@
         }
 
 
-
         .resource-link i {
             margin-left: 5px;
         }
@@ -175,6 +174,7 @@
             }
         }
     </style>
+    <link rel="preload" as="image" href="assets/resource-banner.jpg" fetchpriority="high">
 </head>
 
 <body>
@@ -237,7 +237,7 @@
 
     <div class="explore-banner"
         style="margin-top: 0; position: relative; width: 100%; height: 550px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/resource-banner.jpg" alt="Resources Banner" loading="eager"
+        <img fetchpriority="high" src="assets/resource-banner.jpg" alt="Resources Banner" loading="eager"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)); z-index: 1;">
@@ -347,7 +347,6 @@
             </div>
         </div>
 
-
     </main>
 
     <!-- Footer -->
@@ -402,7 +401,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

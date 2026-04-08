@@ -36,8 +36,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" href="assets/logo.png">
+
     <link rel="preload" as="image" href="assets/hero-main-v1.webp" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet"
         media="print" onload="this.media='all'">
@@ -58,7 +57,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
 
     <link rel="manifest" href="site.webmanifest?v=4">
-
 
 
 
@@ -172,7 +170,7 @@
             <div class="hero-content">
                 <h1 data-translate="hero_title">Smarter Solutions for Better Future</h1>
                 <h3 data-translate="hero_subtitle"
-                    style="color:rgb(48, 47, 47); margin-top: -10px; margin-bottom: 20px; font-weight: 400; opacity: 0; animation: heroTitleReveal 2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;">
+                    style="color:rgb(48, 47, 47); margin-top: -10px; margin-bottom: 20px; font-weight: 400;">
                     Web Development | Mobile Apps | SEO | Digital Marketing </h3>
                 <p data-translate="hero_description">Navabharath Technologies is a Mysore based Software Company focused
                     on helping businesses adapt, grow, & stay secure in a digital-first world. We design practical IT
@@ -186,7 +184,7 @@
             </div>
             <div class="hero-image">
                 <div class="image-clip-wrapper" id="heroCarousel">
-                    <img src="assets/hero-main-v1.webp" 
+                    <img fetchpriority="high" src="assets/hero-main-v1.webp" 
                         alt="Technology Solutions"
                         class="movable-image carousel-slide active" width="600" height="400" loading="eager">
                     <img src="assets/hero-secondary-v1.webp" alt="AI Solutions" 
@@ -531,7 +529,7 @@
         </button>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

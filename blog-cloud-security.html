@@ -145,6 +145,7 @@
             }
         }
     </style>
+    <link rel="preload" as="image" href="assets/quantum-leap-hero-v2.jpg" fetchpriority="high">
 </head>
 
 <body>
@@ -209,7 +210,7 @@
                 <h1 class="blog-post-main-title">Cloud Security Challenges and How to Overcome Them</h1>
             </div>
 
-            <img src="assets/quantum-leap-hero-v2.jpg" alt="AI Agents Quantum Leap" class="blog-featured-image" loading="eager">
+            <img fetchpriority="high" src="assets/quantum-leap-hero-v2.jpg" alt="AI Agents Quantum Leap" class="blog-featured-image" loading="eager">
 
             <div class="blog-body">
                 <p>In 2030, software services won't just do what you ask them to; they'll also be able to guess what you
@@ -380,7 +381,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

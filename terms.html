@@ -112,6 +112,7 @@
             }
         }
     </style>
+    <link rel="preload" as="image" href="assets/terms-banner.png" fetchpriority="high">
 </head>
 
 <body>
@@ -174,7 +175,7 @@
 
     <div class="explore-banner"
         style="margin-top: 0; position: relative; width: 100%; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/terms-banner.png" alt="Terms & Conditions Banner" loading="eager"
+        <img fetchpriority="high" src="assets/terms-banner.png" alt="Terms & Conditions Banner" loading="eager"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
         <div
             style="position: relative; z-index: 2; text-align: center; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
@@ -329,7 +330,7 @@
         </button>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
