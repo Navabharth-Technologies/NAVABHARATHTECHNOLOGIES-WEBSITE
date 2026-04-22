@@ -214,7 +214,8 @@ header.header-hidden {
 
 nav ul {
     display: flex;
-    gap: 15px;
+    gap: 25px;
+    align-items: center;
 }
 
 .nav-menu {
@@ -222,6 +223,10 @@ nav ul {
     display: flex;
     justify-content: flex-start;
     padding-left: 2%;
+}
+
+nav {
+    margin-right: auto;
 }
 
 nav a {
@@ -239,6 +244,58 @@ nav a {
     font-size: 1.05rem;
     line-height: 1.2;
     letter-spacing: 0.2px;
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--primary-color);
 }
 
 /* Contact CTA Button in Header */
@@ -2875,7 +2932,90 @@ section, .hero, .about, .services, .contact, .clients-section, .projects-section
     section, .hero, .about, .services, .contact, .clients-section, .projects-section, .why-choose-us {
         padding: 50px 0 !important;
     }
+
+    /* Structural fixes for Mobile */
+    .hero-container, .about-container {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 40px !important;
+    }
+    
+    p, .hero-content p, .about-content p, .service-card p, .feature-text p, .review-text {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: justify !important;
+    }
+
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 !important;
+    }
+
+    .hero-image img, .about-image img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Fixed mobile offcanvas nav menu */
+    .nav-menu {
+        align-items: flex-start !important;
+        gap: 15px !important;
+        padding: 70px 24px !important;
+    }
+
+    .nav-menu ul {
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .nav-menu li {
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .btn-contact-cta {
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 5px 0 5px 20px !important;
+    }
+
+    .nav-menu .dropdown-menu li a {
+        padding: 8px 10px !important;
+    }
+
+    .nav-menu .language-selector {
+        margin-top: 10px !important;
+    }
+
 }
+
 @media (max-width: 480px) {
     h1, .hero-content h1 { font-size: 1.8rem !important; }
     h2, .section-header h2, .about-content h2, .contact-info h2 { font-size: 1.5rem !important; }

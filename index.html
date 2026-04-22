@@ -18,6 +18,8 @@
     <title>Navabharath Technologies | Web Development, AI & Digital Marketing Company in Mysore</title>
     <meta name="description"
         content="Navabharath Technologies is a top software company in Mysore offering web development, mobile apps, AI solutions, and digital marketing services. Grow your business with our expert team.">
+    <meta name="keywords"
+        content="Navabharath Technologies, Web Development, Mobile App Development, AI Solutions, Artificial Intelligence, Digital Marketing, SEO, Search Engine Optimization, DevOps, IVR Systems, IT Solutions, Software Company in Mysore, Best Tech Company Mysore, E-commerce Website Development, Enterprise Software">
     <link rel="canonical" href="https://www.navabharathtechnologies.com/">
 
     <!-- Open Graph / Social Media Meta Tags -->
@@ -29,6 +31,8 @@
     <meta property="og:image" content="https://www.navabharathtechnologies.com/assets/android-chrome-512x512.png">
 
     <link rel="stylesheet" href="style.css">
+
+
     <link rel="stylesheet" href="notification.css">
     <!-- Non-critical CSS Deferral -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -91,6 +95,7 @@
 </head>
 
 <body>
+
     <!-- Custom Notification -->
     <div id="customNotification" class="custom-notification"></div>
 
@@ -108,12 +113,13 @@
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
                         <li><a href="index.html#about" data-translate="nav_about">About</a></li>
-                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
+
                 <div class="language-selector">
                     <button class="lang-btn" id="langBtn">
                         <i class="fas fa-globe"></i>
@@ -132,6 +138,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search..."
                     data-translate="search_placeholder">
@@ -142,6 +149,7 @@
                     <i class="fas fa-microphone"></i>
                 </button>
             </div>
+
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
@@ -150,29 +158,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-floating-bg">
-            <span class="floating-text t1">AI</span>
-            <span class="floating-text t2">Cloud</span>
-            <span class="floating-text t3">Secure</span>
-            <span class="floating-text t4">SaaS</span>
-            <span class="floating-text t5">DevOps</span>
-            <span class="floating-text t6">Web</span>
-
-            <!-- Floating Icons -->
-            <i class="fas fa-lightbulb floating-icon i1"></i>
-            <i class="fas fa-question-circle floating-icon i2"></i>
-            <i class="fas fa-cogs floating-icon i3"></i>
-            <i class="fas fa-rocket floating-icon i4"></i>
-            <i class="fas fa-shield-alt floating-icon i5"></i>
-        </div>
 
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 data-translate="hero_title">Smarter Solutions for Better Future</h1>
-                <h3 data-translate="hero_subtitle"
-                    style="color:rgb(48, 47, 47); margin-top: -10px; margin-bottom: 20px; font-weight: 400;">
-                    Web Development | Mobile Apps | SEO | Digital Marketing </h3>
-                <p data-translate="hero_description">Navabharath Technologies is a Mysore based Software Company focused
+                <p data-translate="hero_description">
+                    Navabharath Technologies is a Mysore based Software Company focused
                     on helping businesses adapt, grow, & stay secure in a digital-first world. We design practical IT
                     solutions that simplify everyday operations, strengthen system architecture, safeguard critical
                     business data, & support consistent, long-term growth through modern & future-ready technologies.
@@ -183,12 +174,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-clip-wrapper" id="heroCarousel">
-                    <img fetchpriority="high" src="assets/hero-main-v1.webp" 
-                        alt="Technology Solutions"
-                        class="movable-image carousel-slide active" width="600" height="400" loading="eager">
-                    <img src="assets/hero-secondary-v1.webp" alt="AI Solutions" 
-                        class="movable-image carousel-slide" width="600" height="400" loading="eager">
+                <div class="image-clip-wrapper">
+                    <img src="assets/hero-main-v1.webp" alt="Navabharath Technologies Web Development" class="movable-image" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -467,6 +454,10 @@
                         <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
                     </div>
                     <div class="form-group">
+                        <label for="phone" data-translate="form_phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" maxlength="15" required>
+                    </div>
+                    <div class="form-group">
                         <label for="message" data-translate="form_message">Message</label>
                         <textarea id="message" name="message" rows="4" placeholder="Enter Your Message"
                             required></textarea>
@@ -530,6 +521,20 @@
     </footer>
 
     <script src="app.js" defer></script>
+
+
+    <script>
+
+        /* ── Header Scroll Effect ── */
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-solid');
+            } else {
+                header.classList.remove('header-solid');
+            }
+        });
+    </script>
 </body>
 
 </html>

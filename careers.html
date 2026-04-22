@@ -18,7 +18,16 @@
         content="Build the future with Navabharath Technologies. Join our team of innovators and creators.">
     <link rel="canonical" href="https://www.navabharathtechnologies.com/careers.html">
 
+    <!-- Favicons - Optimized for Search Engines -->
+    <!-- favicon.ico for Google Search compatibility -->
     <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="favicon.ico?v=4">
+    <link rel="manifest" href="site.webmanifest?v=4">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="careers.css">
@@ -42,12 +51,13 @@
                     <ul>
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
                         <li><a href="index.html#about" data-translate="nav_about">About</a></li>
-                        <li><a href="careers.html" data-translate="nav_careers" class="active">Careers</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
                         <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
                         <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
+
                 <div class="language-selector">
                     <button class="lang-btn" id="langBtn">
                         <i class="fas fa-globe"></i>
@@ -66,6 +76,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search..."
                     data-translate="search_placeholder">
@@ -76,6 +87,7 @@
                     <i class="fas fa-microphone"></i>
                 </button>
             </div>
+
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
@@ -88,8 +100,7 @@
             <div class="hero-bg-orb"></div>
             <div class="container hero-content">
                 <h1 class="fade-in-up">Build the Future with Us</h1>
-                <p class="fade-in-up delay-1">Join a team of innovators, creators, and problem solvers dedicated to
-                    shaping the digital world.</p>
+                <p class="fade-in-up delay-1">Start your career growth with us. Join a team of innovators, creators, and problem solvers dedicated to shaping the digital world.</p>
                 <div class="hero-ctas fade-in-up delay-2">
                     <a href="#open-roles" class="btn btn-primary">View Open Roles</a>
                     <a href="#process" class="btn btn-secondary">Our Hiring Process</a>
@@ -107,7 +118,7 @@
         <section class="why-us section-padding">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>Why Navabharath?</h2>
+                    <h2>Why Navabharath Technologies?</h2>
                     <p>We’re not just building software; we’re building careers.</p>
                 </div>
                 <div class="cards-grid">
@@ -133,43 +144,6 @@
             </div>
         </section>
 
-        <!-- C) Values (Constellation/Timeline) -->
-        <section class="values-section section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2>Our Values</h2>
-                </div>
-                <div class="values-timeline">
-                    <div class="value-item left">
-                        <div class="value-content">
-                            <h3>Customer First</h3>
-                            <p>We measure our success by the success of our clients. We go above and beyond to deliver
-                                value.</p>
-                        </div>
-                    </div>
-                    <div class="value-item right">
-                        <div class="value-content">
-                            <h3>Integrity Always</h3>
-                            <p>We believe in doing the right thing, even when no one is watching. Transparency is key.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="value-item left">
-                        <div class="value-content">
-                            <h3>Innovate Daily</h3>
-                            <p>We challenge the status quo. We are constantly exploring new technologies and better ways
-                                to solve problems.</p>
-                        </div>
-                    </div>
-                    <div class="value-item right">
-                        <div class="value-content">
-                            <h3>Collaborate & Win</h3>
-                            <p>We are a team. We support each other, share knowledge, and celebrate wins together.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- D) Benefits -->
         <section class="benefits-section section-padding">
@@ -229,7 +203,6 @@
 
                 <div id="no-jobs-message" class="empty-state hidden">
                     <p>Currently we don't have any openings.</p>
-                    <a href="#talent-network" class="btn btn-secondary">Join Talent Network</a>
                 </div>
             </div>
         </section>
@@ -310,58 +283,6 @@
             </div>
         </section>
 
-        <!-- H) Final CTA / Talent Network -->
-        <section id="talent-network" class="talent-network-section section-padding">
-            <div class="container text-center">
-                <h2>Apply Now!</h2>
-                <p>Join our talent network and we'll notify you when a match opens up.</p>
-
-                <!-- Career Application Form -->
-                <form id="careerApplicationForm" class="talent-form">
-                    <input type="text" id="career-name" name="name" placeholder="Full Name" required>
-                    <input type="email" id="career-email" name="email" placeholder="Email Address" required>
-                    <input type="tel" id="career-phone" name="phone" placeholder="Phone Number" required>
-                    <select id="career-job-role" name="jobRole" required>
-                        <option value="" disabled selected>Select Job Role</option>
-                        <!-- Options will be populated by JavaScript -->
-                    </select>
-                    <input type="number" id="career-experience" name="experience"
-                        placeholder="Years of Experience (Optional)" min="0" max="50">
-
-                    <!-- Resume Upload -->
-                    <div class="file-upload-wrapper">
-                        <input type="file" id="resume-upload" name="resume" accept=".pdf,.doc,.docx" required>
-                        <label for="resume-upload" class="file-upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <span id="file-upload-text">Upload Resume (PDF, DOC, DOCX)</span>
-                        </label>
-                        <div id="file-info" class="file-info hidden"></div>
-                    </div>
-
-                    <!-- Message / Cover Letter -->
-                    <textarea id="career-message" name="message" placeholder="Message / Cover Letter (Optional)"
-                        rows="4"></textarea>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary" id="career-submit-btn">
-                        <span id="submit-text">Join Network</span>
-                        <span id="submit-loader" class="submit-loader hidden">
-                            <i class="fas fa-spinner fa-spin"></i> Submitting...
-                        </span>
-                    </button>
-
-                    <!-- Success/Error Messages -->
-                    <div id="career-success-message" class="form-message success-message hidden">
-                        <i class="fas fa-check-circle"></i>
-                        Application submitted successfully. Our team will contact you.
-                    </div>
-                    <div id="career-error-message" class="form-message error-message hidden"></div>
-                </form>
-
-                <p class="privacy-note">We'll only use this to contact you about opportunities. <a
-                        href="privacy.html">Privacy Policy</a>.</p>
-            </div>
-        </section>
 
         <!-- I) EEO -->
         <section class="eeo-section">
@@ -397,7 +318,7 @@
             <div class="footer-links">
                 <h4 data-translate="footer_careers">Careers</h4>
                 <ul>
-                    <li><a href="#" data-translate="footer_join_team">Join our Team</a></li>
+                    <li><a href="careers.html" data-translate="footer_join_team">Join our Team</a></li>
                 </ul>
             </div>
             <div class="footer-social">
