@@ -596,6 +596,25 @@
                                 <input type="file" id="app-resume" accept=".pdf,.doc,.docx" required>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-layer-group"></i> Department</label>
+                                <input type="text" id="app-department" readonly style="background:#f1f5f9;cursor:default;color:#475569;">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                                <input type="text" id="app-location" readonly style="background:#f1f5f9;cursor:default;color:#475569;">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-briefcase"></i> Years of Experience *</label>
+                                <input type="number" id="app-experience" min="0" max="50" step="1" placeholder="e.g. 2" required>
+                            </div>
+                            <div class="form-group">
+                                <!-- spacer -->
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label><i class="fas fa-comment-dots"></i> Cover Letter <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#94a3b8;">(Optional)</span></label>
                             <textarea id="app-cover" rows="4" placeholder="Tell us why you're the best fit for this role..."></textarea>
@@ -784,17 +803,24 @@
             document.getElementById('apply-empty-state').style.display = 'none';
             document.getElementById('apply-form-container').style.display = 'block';
 
+            // Auto-fill read-only fields from the job posting
+            document.getElementById('app-department').value = job.team     || '';
+            document.getElementById('app-location').value   = job.location || '';
+
             document.getElementById('jobApplicationForm').onsubmit = async function(e) {
                 e.preventDefault();
 
                 const submitBtn       = this.querySelector('.submit-application-btn');
                 const originalBtnHTML = submitBtn.innerHTML;
 
-                // Build FormData — phone is saved to candidate record on backend
+                // Build FormData — phone + extra fields saved on backend
                 const formData = new FormData();
                 formData.append('jobId',       job.id);
                 formData.append('coverLetter', document.getElementById('app-cover').value.trim());
                 formData.append('phone',       document.getElementById('app-phone').value.trim());
+                formData.append('department',  job.team     || '');
+                formData.append('location',    job.location || '');
+                formData.append('experience',  document.getElementById('app-experience').value.trim());
 
                 const resumeFile = document.getElementById('app-resume').files[0];
                 if (!resumeFile) {
