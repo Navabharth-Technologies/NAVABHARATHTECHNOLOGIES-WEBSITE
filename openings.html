@@ -790,10 +790,11 @@
                 const submitBtn       = this.querySelector('.submit-application-btn');
                 const originalBtnHTML = submitBtn.innerHTML;
 
-                // New API: only needs jobId, coverLetter, resume (name/email come from JWT)
+                // Build FormData — phone is saved to candidate record on backend
                 const formData = new FormData();
                 formData.append('jobId',       job.id);
                 formData.append('coverLetter', document.getElementById('app-cover').value.trim());
+                formData.append('phone',       document.getElementById('app-phone').value.trim());
 
                 const resumeFile = document.getElementById('app-resume').files[0];
                 if (!resumeFile) {
