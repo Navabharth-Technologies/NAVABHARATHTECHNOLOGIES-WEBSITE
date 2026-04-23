@@ -68,8 +68,8 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--white);
-    padding-top: 110px;
-    /* Offset for fixed header */
+    padding-top: 88px;
+    /* Offset for fixed header — matches actual header height */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -569,51 +569,65 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Hero Section */
+/* Hero Section — Premium Mesh Gradient */
 .hero {
-    background: linear-gradient(135deg, #f0f6ff 0%, #e4edff 25%, #f8fbff 60%, #ffffff 100%);
-    background-size: 400% 400%;
-    animation: gradientAnimation 12s ease infinite;
-    padding: 56px 0 60px;
-    min-height: 72vh;
+    background:
+        /* Top-right vivid blue orb */
+        radial-gradient(ellipse at 80% 10%, rgba(79, 145, 245, 0.22) 0%, transparent 55%),
+        /* Bottom-left navy orb */
+        radial-gradient(ellipse at 5% 85%, rgba(15, 45, 110, 0.18) 0%, transparent 50%),
+        /* Center-top soft azure */
+        radial-gradient(ellipse at 50% 0%, rgba(46, 111, 212, 0.14) 0%, transparent 60%),
+        /* Base gradient: rich blue → clean white */
+        linear-gradient(145deg, #ddeeff 0%, #eaf3ff 20%, #f5f9ff 50%, #ffffff 80%, #fafcff 100%);
+    background-size: 100% 100%;
+    padding: 28px 0 60px;
+    min-height: 76vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
 }
 
-/* Subtle decorative orb behind hero */
+/* Animated shimmer ring — top right */
 .hero::before {
     content: '';
     position: absolute;
-    top: -10%;
-    right: -5%;
-    width: 550px;
-    height: 550px;
-    background: radial-gradient(circle, rgba(79, 145, 245, 0.1) 0%, rgba(26, 75, 171, 0.04) 50%, transparent 70%);
+    top: -15%;
+    right: -8%;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle at 50% 50%,
+        rgba(79, 145, 245, 0.18) 0%,
+        rgba(46, 111, 212, 0.1) 35%,
+        transparent 65%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
-    animation: orbFloat 10s ease-in-out infinite;
+    animation: orbFloat 12s ease-in-out infinite;
 }
 
+/* Second decorative glow — bottom left */
 .hero::after {
     content: '';
     position: absolute;
-    bottom: -5%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(15, 45, 110, 0.06) 0%, transparent 70%);
+    bottom: -10%;
+    left: -8%;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle at 50% 50%,
+        rgba(15, 45, 110, 0.12) 0%,
+        rgba(26, 75, 171, 0.06) 40%,
+        transparent 65%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
-    animation: orbFloat 14s ease-in-out 2s infinite reverse;
+    animation: orbFloat 16s ease-in-out 2s infinite reverse;
 }
 
 @keyframes orbFloat {
     0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(15px, -15px) scale(1.05); }
+    50% { transform: translate(20px, -20px) scale(1.06); }
 }
 
 .hero-floating-bg {
@@ -1593,7 +1607,7 @@ footer {
     /* Mobile-friendly font sizing and tighter layout for tablets */
     body {
         font-size: 15px;
-        padding-top: 80px;
+        padding-top: 68px;
         /* Adjusted for smaller mobile header */
     }
 
