@@ -1297,279 +1297,398 @@
 }
 
 /* ============================================
-   ENHANCED MOBILE RESPONSIVE STYLES
-   Add these to the existing @media (max-width: 768px) block
+   TABLET / LAPTOP RESPONSIVE STYLES (max-width: 1024px)
    ============================================ */
+@media (max-width: 1024px) {
+    .careers-hero {
+        padding: 120px 30px 60px;
+        min-height: 50vh;
+    }
 
-/* Hero Section Mobile Enhancements */
-.careers-hero {
-    padding: 60px 20px 40px !important;
-    min-height: 60vh !important;
-}
-
-.careers-hero p {
-    font-size: 1rem !important;
-    margin-bottom: 20px !important;
-}
-
-.hero-ctas {
-    flex-direction: row !important;
-    gap: 8px !important;
-    width: 100% !important;
-    margin-bottom: 30px !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-}
-
-.hero-ctas .btn {
-    width: auto !important;
-    padding: 8px 16px !important;
-    font-size: 0.85rem !important;
-    justify-content: center !important;
-    display: inline-block !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-}
-
-.btn-primary {
-    padding: 8px 16px !important;
-}
-
-.btn-secondary {
-    padding: 8px 16px !important;
-}
-
-/* Trust Strip Mobile */
-.trust-strip {
-    flex-direction: column !important;
-    gap: 12px !important;
-    align-items: center !important;
-    text-align: center !important;
-    font-size: 0.9rem !important;
-}
-
-.trust-strip span {
-    justify-content: center !important;
-    width: 100% !important;
-}
-
-/* Benefits Grid Mobile */
-.benefits-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    gap: 16px !important;
-    padding: 0 20px 20px 20px !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-}
-
-.benefits-grid::-webkit-scrollbar {
-    height: 6px;
-}
-
-.benefits-grid::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-}
-
-.benefits-grid::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
-    border-radius: 3px;
-}
-
-.benefit-item {
-    padding: 28px 20px !important;
-    margin: 0 !important;
-    min-width: 250px !important;
-    max-width: 250px !important;
-    flex-shrink: 0 !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%) !important;
-    scroll-snap-align: start !important;
-}
-
-.benefit-item i {
-    font-size: 2.5rem !important;
-    margin-bottom: 16px !important;
-}
-
-.benefit-item h4 {
-    font-size: 1.25rem !important;
-    margin-bottom: 12px !important;
-    font-weight: 600 !important;
-}
-
-.benefit-item p {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    color: #666 !important;
-}
-
-/* Stats Section Mobile */
-.stats-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-    padding: 30px 20px !important;
-}
-
-.stat-card {
-    padding: 20px !important;
-}
-
-.stat-number {
-    font-size: 2rem !important;
-}
-
-/* Job Listings Mobile */
-.jobs-section {
-    padding: 40px 20px !important;
-}
-
-.section-header h2 {
-    font-size: 1.8rem !important;
-}
-
-.filters {
-    flex-direction: column !important;
-    gap: 12px !important;
-}
-
-.filter-group {
-    width: 100% !important;
-}
-
-.filter-group select {
-    width: 100% !important;
-    font-size: 0.95rem !important;
-}
-
-.jobs-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-}
-
-.job-info h3 {
-    font-size: 1.2rem !important;
-}
-
-.job-meta {
-    flex-direction: column !important;
-    gap: 8px !important;
-    align-items: flex-start !important;
-}
-
-.job-summary {
-    font-size: 0.9rem !important;
-}
-
-/* Career Application Form Mobile */
-.talent-section {
-    padding: 40px 20px !important;
-}
-
-.talent-form {
-    padding: 30px 20px !important;
-}
-
-.talent-form input,
-.talent-form select,
-.talent-form textarea {
-    font-size: 16px !important;
-    /* Prevents zoom on iOS */
-    padding: 14px 12px !important;
-}
-
-.talent-form select {
-    padding-right: 36px !important;
-    background-position: right 12px center !important;
-}
-
-.file-upload-label {
-    padding: 16px !important;
-    font-size: 0.95rem !important;
-}
-
-.file-upload-label i {
-    font-size: 1.8rem !important;
-}
-
-.talent-form button[type="submit"] {
-    width: 100% !important;
-    padding: 16px !important;
-    font-size: 1rem !important;
-}
-
-/* Form Messages Mobile */
-.form-message {
-    padding: 14px !important;
-    font-size: 0.9rem !important;
-}
-
-/* General Spacing */
-section {
-    padding: 40px 20px !important;
-}
-
-/* Touch-Friendly Buttons */
-.btn {
-    min-height: 44px !important;
-    /* iOS recommended touch target */
-    padding: 12px 24px !important;
-}
-
-/* Accordion Mobile */
-.accordion-header {
-    padding: 16px !important;
-    font-size: 1rem !important;
-}
-
-.accordion-content {
-    max-height: 0 !important;
-    overflow: hidden !important;
-    padding: 0 16px !important;
-    font-size: 0.9rem !important;
-    transition: max-height 0.3s ease, padding 0.3s ease !important;
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 300px !important;
-    padding: 16px !important;
-}
-
-/* Small Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
     .careers-hero h1 {
-        font-size: 1.75rem !important;
+        font-size: 3rem;
     }
 
     .careers-hero p {
-        font-size: 0.95rem !important;
+        font-size: 1.15rem;
+        max-width: 600px;
+    }
+
+    .hero-ctas {
+        gap: 14px;
+        margin-bottom: 50px;
+    }
+
+    .trust-strip {
+        gap: 24px;
+        font-size: 0.95rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 30px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .benefit-item {
+        padding: 24px 16px;
+    }
+
+    .process-stepper {
+        gap: 0;
+    }
+
+    .step-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .step h4 {
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.85rem;
     }
 
     .section-header h2 {
-        font-size: 1.5rem !important;
+        font-size: 2.1rem;
     }
 
-    .stat-number {
-        font-size: 1.75rem !important;
+    .jobs-list {
+        max-width: 100%;
+    }
+
+    .job-card {
+        padding: 22px;
+    }
+
+    .accordion {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .careers-hero {
+        padding: 100px 20px 50px;
+        min-height: 55vh;
+    }
+
+    .careers-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .careers-hero p {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-ctas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 36px;
+        justify-content: center;
+    }
+
+    .hero-ctas .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    /* Trust Strip */
+    .trust-strip {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .trust-strip span {
+        justify-content: center;
+    }
+
+    /* Why Us Cards */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 28px 20px;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Benefits Grid — horizontal scroll on mobile */
+    .benefits-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 14px;
+        padding: 0 16px 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        grid-template-columns: unset;
+    }
+
+    .benefits-grid::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .benefits-grid::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .benefits-grid::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+        border-radius: 3px;
+    }
+
+    .benefit-item {
+        min-width: 200px;
+        max-width: 200px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        padding: 24px 16px;
+        margin: 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        /* Disable the float animation on mobile for perf */
+        animation: benefitReveal 0.7s ease forwards !important;
+    }
+
+    .benefit-item:nth-child(even) {
+        animation: benefitReveal 0.7s ease forwards !important;
+    }
+
+    .benefit-item i {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .benefit-item h4 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* Open Roles */
+    .filters-container {
+        gap: 10px;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group select {
+        width: 100%;
+        min-width: unset;
+        font-size: 0.95rem;
+        padding: 12px 40px 12px 14px;
+    }
+
+    .jobs-list {
+        max-width: 100%;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .job-card .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .job-info h3 {
-        font-size: 1.1rem !important;
+        font-size: 1.15rem;
+    }
+
+    .job-meta {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .job-summary {
+        font-size: 0.9rem;
+    }
+
+    /* Hiring Process Stepper */
+    .process-stepper {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .step-circle {
+        margin: 0 auto 12px;
+        width: 54px;
+        height: 54px;
+        font-size: 1.2rem;
+    }
+
+    .step-line {
+        display: none;
+    }
+
+    .candidate-tips {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    /* FAQ Accordion */
+    .accordion {
+        max-width: 100%;
+    }
+
+    .accordion-header {
+        padding: 16px 4px;
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        padding: 0 4px;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 300px;
+    }
+
+    /* Talent Form */
+    .talent-form {
+        max-width: 100%;
+    }
+
+    .talent-form input,
+    .talent-form select,
+    .talent-form textarea {
+        font-size: 16px; /* Prevents iOS zoom */
+        padding: 13px 12px;
+    }
+
+    .talent-form select {
+        padding-right: 36px;
+        background-position: right 12px center;
+    }
+
+    .file-upload-label {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .talent-form button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /* Touch-Friendly Buttons */
+    .btn {
+        min-height: 44px; /* iOS recommended touch target */
+    }
+
+    /* EEO section spacing */
+    .eeo-section {
+        padding: 24px 20px;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .careers-hero {
+        padding: 90px 16px 40px;
+    }
+
+    .careers-hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+    }
+
+    .careers-hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 22px 16px;
+    }
+
+    .benefit-item {
+        min-width: 180px;
+        max-width: 180px;
+        padding: 20px 12px;
+    }
+
+    .job-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .step-circle {
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .accordion-header {
+        font-size: 0.95rem;
     }
 
     .talent-form {
-        padding: 20px 16px !important;
-    }
-
-    .form-message {
-        font-size: 0.85rem !important;
+        padding: 0;
     }
 
     .btn {
-        font-size: 0.9rem !important;
-        padding: 10px 20px !important;
+        font-size: 0.9rem;
     }
 }
