@@ -1,406 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0DJHRSEB8S');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <title>Resources | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
-    <meta name="description" content="Explore resources, guides, and insights from Navabharath Technologies.">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="notification.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-
-    <!-- Favicons - Optimized for Search Engines -->
-    <!-- favicon.ico for Google Search compatibility -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
-
-    <link rel="manifest" href="site.webmanifest?v=4">
-
-    <meta name="theme-color" content="#1a3c87">
-    <style>
-        .page-content {
-            padding: 40px 0 60px;
-            min-height: 60vh;
-        }
-
-        .page-content h1 {
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
-
-        .page-content p {
-            margin-bottom: 20px;
-            color: var(--text-color);
-            text-align: justify;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .resource-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.1s ease-out, box-shadow 0.3s ease;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            will-change: transform;
-            position: relative;
-        }
-
-        .card-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: transparent;
-            color: #FFD700;
-            padding: 0;
-            font-size: 1.2rem;
-            z-index: 20;
-            transform: translateZ(20px);
-            box-shadow: none;
-        }
-
-        .card-tag i {
-            animation: twinkle 1.5s infinite alternate;
-        }
-
-        .card-tag i:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .card-tag i:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        @keyframes twinkle {
-            0% {
-                opacity: 0.4;
-                transform: scale(0.8);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1.1);
-                text-shadow: 0 0 10px #FFD700;
-            }
-        }
-
-        .resource-card:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-            cursor: pointer;
-        }
-
-        .resource-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .resource-card img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .resource-card p {
-            color: var(--text-color);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .resource-card .resource-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .resource-link {
-            display: inline-block;
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .resource-link:hover,
-        .resource-card:hover .resource-link {
-            color: var(--secondary-color);
-        }
-
-
-        .resource-link i {
-            margin-left: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .explore-banner {
-                height: 250px !important;
-            }
-        }
-    </style>
-    <link rel="preload" as="image" href="assets/resource-banner.jpg" fetchpriority="high">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Navabharath Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="resources.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="favicon.ico">
 </head>
-
 <body>
-    <!-- CustomNotification -->
-    <div id="customNotification" class="custom-notification"></div>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
-                        loading="eager" fetchpriority="high">
-                </a>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <nav>
-                    <ul>
-                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
-                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
-                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
-                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
-                    </ul>
-                </nav>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-                <div class="language-selector">
-                    <button class="lang-btn" id="langBtn">
-                        <i class="fas fa-globe"></i>
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="language-dropdown" id="langDropdown">
-                        <div class="lang-option" data-lang="en">English</div>
-                        <div class="lang-option" data-lang="es">Spanish</div>
-                        <div class="lang-option" data-lang="fr">French</div>
-                        <div class="lang-option" data-lang="de">German</div>
-                        <div class="lang-option" data-lang="it">Italian</div>
-                        <div class="lang-option" data-lang="pt">Portuguese</div>
-                        <div class="lang-option" data-lang="ar">Arabic</div>
-                        <div class="lang-option" data-lang="kn">Kannada</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
-                    data-translate="search_placeholder">
-                <button class="search-btn" id="searchBtn" aria-label="Search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
-                    <i class="fas fa-microphone"></i>
-                </button>
-            </div>
-
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+<!-- Header / Navbar -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                    loading="eager" fetchpriority="high">
+            </a>
         </div>
-    </header>
-
-    <div class="explore-banner"
-        style="margin-top: 0; position: relative; width: 100%; height: 550px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <img fetchpriority="high" src="assets/resource-banner.jpg" alt="Resources Banner" loading="eager"
-            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
-        <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)); z-index: 1;">
+        <div class="nav-menu" id="navMenu">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                    <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                    <li class="has-dropdown">
+                        <a href="resources.html" class="active" data-translate="nav_resources">Resources <i
+                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resources.html#documentation"><i class="fas fa-book"></i> Documentation</a></li>
+                            <li><a href="blog.html"><i class="fas fa-rss"></i> Blogs</a></li>
+                            <li><a href="resources.html#video-tutorials"><i class="fas fa-play-circle"></i> Video Tutorials</a></li>
+                            <li><a href="resources.html#downloads"><i class="fas fa-download"></i> Downloads</a></li>
+                            <li><a href="resources.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                            <li><a href="resources.html#developer-tools"><i class="fas fa-code"></i> Developer Tools</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                    <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
+</header>
 
-    <main class="container page-content">
-        <section class="explore-section">
-            <h2 data-translate="resources_intro_title">Knowledge Hub</h2>
-            <p data-translate="resources_intro_desc">Discover expert curated resources, step-by-step guides, & industry
-                insights designed to support your digital growth. Our Knowledge Hub covers technology trends, business
-                solutions, best practices, & practical strategies to help organizations improve performance, enhance
-                customer experience, & make informed decisions. Learn from reliable content built to empower modern
-                businesses.</p>
-        </section>
+<!-- HERO BANNER -->
+<div class="hero-banner">
+  <div class="hero-banner-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-banner-inner">
+    <div class="hero-eyebrow"><div class="hero-eyebrow-dot"></div>Knowledge Hub</div>
+    <h1 class="res-hero-title">Resource<span>s</span></h1>
+    <p class="res-hero-subtitle">Expert-curated guides, technology trends, business solutions and practical strategies to accelerate your digital growth.</p>
+  </div>
+  <div class="hero-breadcrumb">
+    <a href="index.html">Home</a><span class="sep">/</span><span class="current">Resources</span>
+  </div>
+</div>
 
-        <div class="resources-grid">
-            <!-- Resource 1 -->
-            <div class="resource-card">
-                <a href="explore.html" class="full-card-link" aria-label="View Documentation"></a>
-                <span class="card-tag">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <img src="assets/documents.jpg" alt="Documentation" loading="lazy">
-                <h3 data-translate="resource_card1_title">Documentation</h3>
-                <p data-translate="resource_card1_desc">Comprehensive guides and technical documentation for our
-                    services and solutions. Learn how to integrate and maximize the value of our technology.</p>
-                <a href="explore.html" class="resource-link"><span data-translate="resource_view_btn">View Documentation</span> <i
-                        class="fas fa-arrow-right"></i></a>
+<!-- FILTER BAR -->
+<div class="filter-section">
+  <div class="filter-inner">
+    <div class="filter-tabs">
+      <button class="filter-tab active">All Resources</button>
+      <button class="filter-tab">Blog Posts</button>
+      <button class="filter-tab">Videos</button>
+      <button class="filter-tab">Tools</button>
+      <button class="filter-tab">News</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="page-body">
+
+  <!-- FEATURED -->
+  <div class="reveal">
+    <div class="featured-label">Featured Article</div>
+    <div class="featured-card" onclick="location.href='blog-chatbots.html'">
+      <div class="featured-img">
+        <img src="assets/chatbot-vs-human-header.png" alt="Cybersecurity 2025">
+        <div class="featured-img-overlay"></div>
+        <div class="featured-cat-badge">Trending</div>
+      </div>
+      <div class="featured-content">
+        <div class="featured-meta">
+          <span class="meta-tag">AI & Automation</span>
+          <div class="meta-dot"></div>
+          <span class="meta-date">Dec 15, 2025</span>
+          <div class="meta-dot"></div>
+          <span class="meta-read">8 min read</span>
+        </div>
+        <h2 class="featured-title">How Chatbots are Changing the Face of Customer Support</h2>
+        <p class="featured-desc">Explore the powerful roles of chatbots and human agents in shaping modern customer experiences. Balance automation with emotional intelligence to boost satisfaction.</p>
+        <div class="featured-author">
+          <div class="author-avatar">TT</div>
+          <div>
+            <div class="author-name">Tech Team</div>
+            <div class="author-role">Navabharath Technologies</div>
+          </div>
+        </div>
+        <button class="btn-read">Read Full Article <span class="arrow">&#8594;</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="categories-section reveal">
+    <div class="sec-header">
+      <div>
+        <div class="sec-label">Browse by Category</div>
+        <h2 class="sec-title">Explore Topics</h2>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" id="documentation"><div class="cat-icon">&#128196;</div><div class="cat-name">Documentation</div><div class="cat-count">12 Resources</div></div>
+      <div class="cat-card" onclick="location.href='blog.html'"><div class="cat-icon">&#128221;</div><div class="cat-name">Blog Posts</div><div class="cat-count">24 Articles</div></div>
+      <div class="cat-card" id="video-tutorials"><div class="cat-icon">&#128249;</div><div class="cat-name">Video Tutorials</div><div class="cat-count">8 Videos</div></div>
+      <div class="cat-card" id="downloads"><div class="cat-icon">&#128229;</div><div class="cat-name">Downloads</div><div class="cat-count">15 Files</div></div>
+      <div class="cat-card" id="faq"><div class="cat-icon">&#10068;</div><div class="cat-name">FAQ</div><div class="cat-count">20 Q&amp;A</div></div>
+      <div class="cat-card" id="developer-tools"><div class="cat-icon">&#128295;</div><div class="cat-name">Developer Tools</div><div class="cat-count">6 Tools</div></div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-mini reveal">
+    <div class="stats-cell"><div class="stats-num">120<sup>+</sup></div><div class="stats-lbl">Articles Published</div></div>
+    <div class="stats-cell"><div class="stats-num">50<sup>K</sup></div><div class="stats-lbl">Monthly Readers</div></div>
+    <div class="stats-cell"><div class="stats-num">40<sup>+</sup></div><div class="stats-lbl">Expert Contributors</div></div>
+    <div class="stats-cell"><div class="stats-num">6</div><div class="stats-lbl">Resource Categories</div></div>
+  </div>
+
+  <!-- LATEST ARTICLES -->
+  <div class="reveal">
+    <div class="sec-header">
+      <div><div class="sec-label">Latest</div><h2 class="sec-title">Recent Articles</h2></div>
+      <a href="blog.html" class="view-all">View All Articles &#8594;</a>
+    </div>
+    <div class="cards-grid">
+      
+      <div class="resource-card reveal reveal-delay-1" data-type="article" data-category="Cloud & Infra" onclick="window.open('blog-cloud-innovation.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/Cloud%20Computing.png" alt="Cloud Computing: The Backbone of Modern Innovation">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-guide">Cloud & Infra</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">April 08, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">Cloud Computing: The Backbone of Modern Innovation</h3>
+          <p class="card-desc">Discover how cloud computing is driving digital transformation, enhancing agility, and enabling businesses to innovate faster than ever before.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
             </div>
-
-            <!-- Resource 2 -->
-            <div class="resource-card">
-                <a href="blog.html" class="full-card-link" aria-label="Read Blog"></a>
-                <img src="assets/Blogs.jpg" alt="Blog & Insights" loading="lazy">
-                <h3 data-translate="resource_card2_title">Blog & Insights</h3>
-                <p data-translate="resource_card2_desc">Stay updated with the latest trends, tips, and insights from our
-                    team of experts. Discover industry news and best practices.</p>
-                <a href="blog.html" class="resource-link"><span data-translate="resource_read_btn">Read Blog</span> <i
-                        class="fas fa-arrow-right"></i></a>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-2" data-type="article" data-category="Software Dev" onclick="window.open('blog-testing-approaches.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/testing%2011.png" alt="Modern Software Testing: A Guide to Different Approaches">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-blog">Software Dev</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Feb 21, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">Modern Software Testing: A Guide to Different Approaches</h3>
+          <p class="card-desc">Understand the differences between manual testing vs automation testing to choose the right strategy.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
             </div>
-
-            <!-- Resource 3 -->
-            <div class="resource-card">
-                <a href="https://www.youtube.com/@NavabharathTechnologies" class="full-card-link" target="_blank" rel="noopener noreferrer" aria-label="Watch Videos"></a>
-
-                <img src="assets/youtube.jpg" alt="Video Tutorials" loading="lazy">
-                <h3 data-translate="resource_card3_title">Video Tutorials</h3>
-                <p data-translate="resource_card3_desc">Watch step-by-step video tutorials and webinars covering various
-                    topics from development to deployment and optimization.</p>
-                <a href="https://www.youtube.com/@NavabharathTechnologies" class="resource-link" target="_blank" rel="noopener noreferrer"><span data-translate="resource_watch_btn">Watch Videos</span> <i
-                        class="fas fa-arrow-right"></i></a>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-3" data-type="article" data-category="Business" onclick="window.open('blog-erp-crm-roi.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/roi.png" alt="Custom ERP and CRM Development ROI: A Guide for Business Owners">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-case">Business</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Feb 15, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">Custom ERP and CRM Development ROI: A Guide for Business Owners</h3>
+          <p class="card-desc">Investing in custom ERP and CRM development can reduce operational waste, improve sales visibility, and unify data.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
             </div>
-
-            <!-- Resource 4 -->
-            <div class="resource-card">
-                <a href="#" class="full-card-link" aria-label="Get Downloads"></a>
-                <span class="card-tag">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <img src="assets/download.jpg" alt="Downloads" loading="lazy">
-                <h3 data-translate="resource_card4_title">Downloads</h3>
-                <p data-translate="resource_card4_desc">Access whitepapers, case studies, and downloadable resources to
-                    help you make informed decisions for your business.</p>
-                <a href="#" class="resource-link"><span data-translate="resource_download_btn">Get Downloads</span> <i
-                        class="fas fa-arrow-right"></i></a>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-1" data-type="article" data-category="Cybersecurity" onclick="window.open('blog-cloud-security.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/quantum-leap-hero-v2.jpg" alt="Cloud Security Challenges and How to Overcome Them">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-blog">Cybersecurity</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Jan 29, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">Cloud Security Challenges and How to Overcome Them</h3>
+          <p class="card-desc">Learn how to protect your digital infrastructure from evolving threats with proactive, layered defense strategies.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
             </div>
-
-            <!-- Resource 5 -->
-            <div class="resource-card">
-                <a href="#" class="full-card-link" aria-label="View FAQ"></a>
-                <span class="card-tag">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <img src="assets/faq.jpg" alt="FAQ" loading="lazy">
-                <h3 data-translate="resource_card5_title">FAQ</h3>
-                <p data-translate="resource_card5_desc">Find answers to frequently asked questions about our services,
-                    processes, and technology solutions.</p>
-                <a href="#" class="resource-link"><span data-translate="resource_faq_btn">View FAQ</span> <i
-                        class="fas fa-arrow-right"></i></a>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-2" data-type="article" data-category="Software Dev" onclick="window.open('blog-web-development.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/page-speed-optimization.png" alt="The Future of Web Development: Trends to Watch in 2024">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-blog">Software Dev</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Jan 07, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">The Future of Web Development: Trends to Watch in 2024</h3>
+          <p class="card-desc">Learn how fast-loading pages impact SEO performance, user experience, and conversion rates.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
             </div>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-3" data-type="article" data-category="Careers" onclick="window.open('blog-freshers-job.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/fresher-career-guide.png" alt="10 Proven Techniques for Freshers to Get Their First Job Faster">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-blog">Careers</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Jan 03, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">10 Proven Techniques for Freshers to Get Their First Job Faster</h3>
+          <p class="card-desc">Discover 10 proven techniques and the exclusive 7-7-7 Fresher Hiring Formula to help you land your first job faster.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
+            </div>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-1" data-type="article" data-category="AI & Automation" onclick="window.open('blog-chatbots.html', '_blank')">
+        <div class="card-img">
+          
+          <img src="assets/chatbot-strengths.png" alt="How Chatbots are Changing the Face of Customer Support">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-blog">AI & Automation</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Dec 15, 2025</span>
+            <div class="card-dot"></div>
+            <span class="card-read">6 min</span>
+          </div>
+          <h3 class="card-title">How Chatbots are Changing the Face of Customer Support</h3>
+          <p class="card-desc">Explore how automation handles quick responses while human agents provide the emotional intelligence needed for complex support.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
+            </div>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-2" data-type="video" data-category="Digital Marketing" onclick="window.open('https://www.youtube.com/watch?v=6gRxsBuT9lc', '_blank')">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:rgba(220,38,38,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;box-shadow:0 0 20px rgba(0,0,0,0.3);z-index:2;"><i class="fas fa-play"></i></div>
+          <img src="https://i.ytimg.com/vi/6gRxsBuT9lc/maxresdefault.jpg" alt="Digital Marketing: Smarter Solutions for Better Future">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-video">Digital Marketing</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">March 20, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">YouTube</span>
+          </div>
+          <h3 class="card-title">Digital Marketing: Smarter Solutions for Better Future</h3>
+          <p class="card-desc">Explore how Navabharath Technologies is driving the future of digital marketing with smarter solutions.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
+            </div>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-3" data-type="video" data-category="Culture" onclick="window.open('https://www.youtube.com/watch?v=lR3TbtfoL18', '_blank')">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:rgba(220,38,38,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;box-shadow:0 0 20px rgba(0,0,0,0.3);z-index:2;"><i class="fas fa-play"></i></div>
+          <img src="https://i.ytimg.com/vi/lR3TbtfoL18/maxresdefault.jpg" alt="Celebrating Our CEO's Birthday | 2026">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-video">Culture</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Jan 15, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">YouTube</span>
+          </div>
+          <h3 class="card-title">Celebrating Our CEO's Birthday | 2026</h3>
+          <p class="card-desc">A glimpse into the culture and celebrations at Navabharath Technologies.</p>
+          <div class="card-footer-row">
+            <div class="card-author-mini">
+              <div class="author-mini-av">TT</div>
+              <span class="author-mini-name">Tech Team</span>
+            </div>
+            <span class="card-arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      <div class="resource-card reveal reveal-delay-2" data-type="video" data-category="Software Dev" onclick="window.open('https://www.youtube.com/shorts/XaV4Qzz5qZs', '_blank')">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:rgba(220,38,38,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;box-shadow:0 0 20px rgba(0,0,0,0.3);z-index:2;"><i class="fas fa-play"></i></div>
+          <img src="https://i.ytimg.com/vi/XaV4Qzz5qZs/hqdefault.jpg" alt="Fix Slow Coding with VS Code 🔥">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge badge-video">Software Dev</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">April 10, 2026</span>
+            <div class="card-dot"></div>
+            <span class="card-read">YouTube</span>
+          </div>
+          <h3 class="card-title">Fix Slow Coding with VS Code 🔥</h3>
+          <p class="card-desc">Quick tech tips: How to speed up your development workflow using VS Code features.</p>
+        </div>
+      </div>
 
-            <!-- Resource 6 -->
-            <div class="resource-card">
-                <a href="#" class="full-card-link" aria-label="Explore Tools"></a>
-                <span class="card-tag">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <img src="assets/developer-tools.jpg" alt="Developer Tools" loading="lazy">
-                <h3 data-translate="resource_card6_title">Developer Tools</h3>
-                <p data-translate="resource_card6_desc">Access APIs, SDKs, and developer tools to integrate our
-                    solutions seamlessly into your applications.</p>
-                <a href="#" class="resource-link"><span data-translate="resource_tools_btn">Explore Tools</span> <i
-                        class="fas fa-arrow-right"></i></a>
+      <!-- News Section -->
+      <div class="resource-card reveal reveal-delay-1" data-type="news" data-category="News">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="GPT-5 Rumors">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#8b5cf6;color:white;">Trending News</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Just Now</span>
+            <div class="card-dot"></div>
+            <span class="card-read">AI Tech</span>
+          </div>
+          <h3 class="card-title">GPT-5: Everything We Know About the Next Leap in AI</h3>
+          <p class="card-desc">Rumors suggest a massive jump in reasoning capabilities and multi-modal integration. Here's the latest leak from Silicon Valley.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-2" data-type="news" data-category="News">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800" alt="Quantum Computing">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#06b6d4;color:white;">Breaking Tech</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2 hours ago</span>
+            <div class="card-dot"></div>
+            <span class="card-read">Quantum</span>
+          </div>
+          <h3 class="card-title">Quantum Supremacy: 2026 Milestone Achieved</h3>
+          <p class="card-desc">Researchers have successfully maintained qubit stability for a record-breaking duration, paving the way for commercial quantum clusters.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-3" data-type="news" data-category="News">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Cybersecurity IoT">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#ef4444;color:white;">Security Alert</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">Today</span>
+            <div class="card-dot"></div>
+            <span class="card-read">CyberSec</span>
+          </div>
+          <h3 class="card-title">New Global Protocols for IoT Security Released</h3>
+          <p class="card-desc">The ITU has finalized the 2026 security standard for smart home devices to combat the rising tide of edge-network vulnerabilities.</p>
+        </div>
+      </div>
+      <!-- Tools Section -->
+      <div class="resource-card reveal reveal-delay-1" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fas fa-code"></i></div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#007acc;color:white;">Development</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Visual Studio Code</h3>
+          <p class="card-desc">Our primary code editor for building robust, scalable applications with ease and efficiency.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-2" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fas fa-paper-plane"></i></div>
+          <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#ff6c37;color:white;">API Testing</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Postman</h3>
+          <p class="card-desc">Essential for designing, building, and testing our APIs to ensure seamless integration.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-3" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fab fa-git-alt"></i></div>
+          <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#f05032;color:white;">Version Control</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Git</h3>
+          <p class="card-desc">The industry standard for distributed version control, keeping our codebase organized.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-1" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fab fa-github"></i></div>
+          <img src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="GitHub" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#181717;color:white;">Collaboration</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">GitHub</h3>
+          <p class="card-desc">Where our teams collaborate on code, manage projects, and automate workflows.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-2" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fab fa-microsoft"></i></div>
+          <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="Azure" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#0089d6;color:white;">Cloud Infrastructure</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Microsoft Azure</h3>
+          <p class="card-desc">Powering our cloud solutions with scalable, secure, and reliable enterprise-grade infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-3" data-type="tool" data-category="Tools">
+        <div class="card-img">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;color:var(--blue);opacity:0.2;"><i class="fab fa-aws"></i></div>
+          <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS" style="object-fit: contain; padding: 40px; background: #f8fafc;">
+          <div class="card-img-overlay"></div>
+          <span class="card-badge" style="background:#ff9900;color:white;">Cloud Services</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Amazon Web Services</h3>
+          <p class="card-desc">Enabling high-performance computing and storage for our most demanding global applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE TOOLS -->
+  <div class="reveal">
+    <div class="sec-header">
+      <div><div class="sec-label">Free Resources</div><h2 class="sec-title">Tools &amp; Templates</h2></div>
+      <a href="#" class="view-all">Browse All Tools &#8594;</a>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card"><div class="tool-icon">&#129518;</div><div class="tool-content"><div class="tool-name">IT Budget Calculator</div><div class="tool-desc">Estimate your annual technology spend across infrastructure, security, and software with our interactive calculator.</div><span class="tool-tag">FREE TOOL</span></div></div>
+      <div class="tool-card"><div class="tool-icon">&#128203;</div><div class="tool-content"><div class="tool-name">Digital Readiness Assessment</div><div class="tool-desc">Score your business digital maturity across 6 dimensions and get a personalized improvement roadmap.</div><span class="tool-tag">FREE ASSESSMENT</span></div></div>
+      <div class="tool-card"><div class="tool-icon">&#128193;</div><div class="tool-content"><div class="tool-name">Project Brief Template Pack</div><div class="tool-desc">12 ready-to-use project brief templates for software, marketing, and infrastructure projects — download instantly.</div><span class="tool-tag">FREE DOWNLOAD</span></div></div>
+      <div class="tool-card"><div class="tool-icon">&#128269;</div><div class="tool-content"><div class="tool-name">SEO Audit Checklist 2025</div><div class="tool-desc">A comprehensive 80-point checklist covering technical SEO, on-page, off-page, and Core Web Vitals in 2025.</div><span class="tool-tag">FREE CHECKLIST</span></div></div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-strip reveal">
+    <div class="nl-text">
+      <div class="nl-label">Stay Informed</div>
+      <h3 class="nl-title">Get Insights Delivered Weekly</h3>
+      <p class="nl-sub">Join 12,000+ professionals who read our newsletter every Thursday.</p>
+    </div>
+    <div class="nl-form">
+      <input class="nl-input" type="email" placeholder="Enter your email address">
+      <button class="nl-btn">Subscribe &#8594;</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-container">
+        <div class="footer-logo">
+            <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy">
+        </div>
+        <div class="footer-links">
+            <h4 data-translate="footer_links_title">Company</h4>
+            <ul>
+                <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                <li><a href="index.html#about" data-translate="footer_about">About</a></li>
+                <li><a href="index.html#services" data-translate="footer_services">Services</a></li>
+                <li><a href="index.html#contact" data-translate="footer_contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4 data-translate="footer_support">Support</h4>
+            <ul>
+                <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
+                <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4 data-translate="footer_careers">Careers</h4>
+            <ul>
+                <li><a href="careers.html" data-translate="footer_join_team">Join Our Team</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4 data-translate="footer_social_title">Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
+                    aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
+                    target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
+                    aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@NavabharathTechnologies" aria-label="YouTube" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy">
-            </div>
-            <div class="footer-links">
-                <h4 data-translate="footer_links_title">Company</h4>
-                <ul>
-                    <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
-                    <li><a href="index.html#about" data-translate="footer_about">About</a></li>
-                    <li><a href="index.html#services" data-translate="footer_services">Services</a></li>
-                    <li><a href="index.html#contact" data-translate="footer_contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4 data-translate="footer_support">Support</h4>
-                <ul>
-                    <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
-                    <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4 data-translate="footer_careers">Careers</h4>
-                <ul>
-                    <li><a href="careers.html" data-translate="footer_join_team">Join our Team</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4 data-translate="footer_social_title">Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
-                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
-                        target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
-                        aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@NavabharathTechnologies" aria-label="YouTube" target="_blank"
-                        rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p data-translate="footer_copyright">&copy; 2026 Navabharath Technologies. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <p data-translate="footer_copyright">&copy; 2026 Navabharath Technologies. All rights reserved.</p>
+    </div>
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
         <i class="fas fa-arrow-up"></i>
     </button>
+</footer>
 
-    <script src="app.js" defer></script>
+<script src="app.js" defer></script>
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let rx=0,ry=0,mx=0,my=0;
+  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+  (function animRing(){ rx+=(mx-rx)*0.14; ry+=(my-ry)*0.14; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
+  document.querySelectorAll('a,button,.resource-card,.cat-card,.tool-card,.featured-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ cursor.style.transform='translate(-50%,-50%) scale(2.5)'; ring.style.transform='translate(-50%,-50%) scale(1.5)'; ring.style.borderColor='rgba(42,91,191,0.5)'; });
+    el.addEventListener('mouseleave',()=>{ cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.transform='translate(-50%,-50%) scale(1)'; ring.style.borderColor='rgba(42,91,191,0.35)'; });
+  });
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.textContent.trim();
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      // --- 1. Identify Elements (Defensive) ---
+      const pageBody = document.querySelector('.page-body');
+      const featuredWrapper = document.querySelector('.featured-card')?.closest('.reveal');
+      const categoriesWrapper = document.querySelector('.categories-section');
+      const statsWrapper = document.querySelector('.stats-mini');
+      const freeToolsWrapper = document.querySelector('.tools-grid')?.closest('.reveal');
+      const mainHeader = pageBody?.querySelector('.sec-header');
+      
+      const secTitle = mainHeader?.querySelector('.sec-title');
+      const secLabel = mainHeader?.querySelector('.sec-label');
+      const viewAll = mainHeader?.querySelector('.view-all');
+
+      // --- 2. Normalize Category ---
+      const catKey = category.toLowerCase();
+      const isAll = catKey.includes('all');
+      const isBlog = catKey.includes('blog') || catKey.includes('insight');
+      const isVideo = catKey.includes('video');
+      const isTool = catKey.includes('tool');
+      const isNews = catKey.includes('news');
+
+      // --- 3. Dynamic Headings ---
+      if (mainHeader) {
+        if (isVideo) {
+          if(secTitle) secTitle.textContent = 'Recent Videos';
+          if(secLabel) secLabel.textContent = 'YouTube';
+          if(viewAll) { viewAll.textContent = 'View YouTube Channel →'; viewAll.href = 'https://www.youtube.com/@NavabharathTechnologies'; }
+        } else if (isBlog) {
+          if(secTitle) secTitle.textContent = 'Recent Articles';
+          if(secLabel) secLabel.textContent = 'Latest';
+          if(viewAll) { viewAll.textContent = 'View All Articles →'; viewAll.href = 'blog.html'; }
+        } else if (isTool) {
+          if(secTitle) secTitle.textContent = 'Our Tech Stack';
+          if(secLabel) secLabel.textContent = 'Ecosystem';
+          if(viewAll) { viewAll.textContent = 'Learn About Our Services →'; viewAll.href = 'index.html#services'; }
+        } else if (isNews) {
+          if(secTitle) secTitle.textContent = 'Trending Tech News';
+          if(secLabel) secLabel.textContent = 'Live Updates';
+          if(viewAll) { viewAll.textContent = 'Follow Industry Trends →'; viewAll.href = '#'; }
+        } else {
+          if(secTitle) secTitle.textContent = 'Resource Hub';
+          if(secLabel) secLabel.textContent = 'Browse';
+          if(viewAll) { viewAll.textContent = 'Explore All →'; viewAll.href = 'blog.html'; }
+        }
+      }
+
+      // --- 4. Section Visibility ---
+      // Show featured/categories/stats ONLY on "All Resources" or "Blog Posts"
+      const showExtras = isAll || isBlog;
+      if(featuredWrapper) featuredWrapper.style.display = showExtras ? 'block' : 'none';
+      if(categoriesWrapper) categoriesWrapper.style.display = showExtras ? 'block' : 'none';
+      if(statsWrapper) statsWrapper.style.display = showExtras ? 'flex' : 'none';
+      if(freeToolsWrapper) freeToolsWrapper.style.display = isAll ? 'block' : 'none';
+
+      // --- 5. Card Filtering ---
+      const cards = document.querySelectorAll('.resource-card');
+      cards.forEach(card => {
+        const type = card.getAttribute('data-type');
+        const cardCatAttr = card.getAttribute('data-category');
+        
+        let showCard = false;
+        if (isAll) showCard = true;
+        else if (isVideo) showCard = (type === 'video');
+        else if (isBlog) showCard = (type === 'article');
+        else if (isTool) showCard = (type === 'tool');
+        else if (isNews) showCard = (type === 'news');
+        else showCard = (cardCatAttr === category);
+
+        card.style.display = showCard ? 'flex' : 'none';
+        if (showCard) card.classList.add('visible');
+      });
+    });
+  });
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin:'0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+  window.addEventListener('scroll', function () {
+    var header = document.querySelector('header');
+    if (window.scrollY > 40) header.classList.add('header-scrolled');
+    else header.classList.remove('header-scrolled');
+  });
+</script>
 </body>
-
 </html>

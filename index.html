@@ -25,14 +25,13 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.navabharathtechnologies.com/">
-    <meta property="og:title" content="Navabharath Technologies | Web Development, AI & Digital Marketing Company in Mysore">
+    <meta property="og:title"
+        content="Navabharath Technologies | Web Development, AI & Digital Marketing Company in Mysore">
     <meta property="og:description"
         content="Navabharath Technologies is a top software company in Mysore offering web development, mobile apps, AI solutions, and digital marketing services. Grow your business with our expert team.">
     <meta property="og:image" content="https://www.navabharathtechnologies.com/assets/android-chrome-512x512.png">
 
     <link rel="stylesheet" href="style.css">
-
-
     <link rel="stylesheet" href="notification.css">
     <!-- Non-critical CSS Deferral -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -40,10 +39,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Premium Fonts: Cormorant Garamond (headings) + Outfit (body) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="preload" as="image" href="assets/hero-main-v1.webp" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     </noscript>
@@ -96,6 +97,15 @@
 
 <body>
 
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Subtle grid background -->
+    <div class="page-bg">
+        <div class="grid-bg"></div>
+    </div>
+
     <!-- Custom Notification -->
     <div id="customNotification" class="custom-notification"></div>
 
@@ -114,9 +124,25 @@
                         <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
                         <li><a href="index.html#about" data-translate="nav_about">About</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
-                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li class="has-dropdown">
+                            <a href="resources.html" data-translate="nav_resources">Resources <i
+                                    class="fas fa-chevron-down dropdown-arrow"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="resources.html#documentation"><i class="fas fa-book"></i> Documentation</a>
+                                </li>
+                                <li><a href="blog.html"><i class="fas fa-rss"></i> Blogs</a></li>
+                                <li><a href="resources.html#video-tutorials"><i class="fas fa-play-circle"></i> Video
+                                        Tutorials</a></li>
+                                <li><a href="resources.html#downloads"><i class="fas fa-download"></i> Downloads</a>
+                                </li>
+                                <li><a href="resources.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                                <li><a href="resources.html#developer-tools"><i class="fas fa-code"></i> Developer
+                                        Tools</a></li>
+                            </ul>
+                        </li>
                         <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
-                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact"
+                                class="btn-contact-cta">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -138,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search..."
                     data-translate="search_placeholder">
@@ -158,48 +184,82 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Floating gradient blobs -->
-        <div class="hero-blob hero-blob-1"></div>
-        <div class="hero-blob hero-blob-2"></div>
-        <div class="hero-blob hero-blob-3"></div>
 
         <div class="container hero-container">
+
+            <!-- LEFT: Content -->
             <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-bolt"></i> Digital Solutions That Drive Results</div>
-                <h1 data-translate="hero_title">Smarter Solutions for Better Future</h1>
-                <p data-translate="hero_description">
-                    Navabharath Technologies is a Mysore based Software Company focused
-                    on helping businesses adapt, grow, &amp; stay secure in a digital-first world. We design practical IT
-                    solutions that simplify everyday operations, strengthen system architecture, safeguard critical
-                    business data, &amp; support consistent, long-term growth through modern &amp; future-ready technologies.
+                <!-- Tagline Badge -->
+                <div class="hero-badge">
+                    <span class="eyebrow-dot"></span> Digital Solutions That Drive Results
+                </div>
+
+                <!-- Heading -->
+                <h1>
+                    Smarter<br>
+                    <em class="hero-em">Solutions</em> for<br>
+                    <span class="hero-accent">Better Future</span>
+                </h1>
+
+                <!-- Description -->
+                <p>
+                    Navabharath Technologies is a <span class="text-highlight-blue">Mysuru-based Software Company</span>
+                    helping businesses adapt,
+                    grow, and stay secure in a digital-first world. We design practical IT solutions that
+                    simplify operations and support long-term growth.
                 </p>
+
+                <!-- Buttons -->
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary" data-translate="hero_cta">Get Started</a>
+                    <a href="#contact" class="btn btn-primary" data-translate="hero_cta">Get Started &nbsp;→</a>
                     <a href="digital-marketing.html" class="btn btn-secondary">Digital Marketing</a>
                 </div>
+
+                <!-- Trust line removed per user request -->
             </div>
+
+            <!-- RIGHT: Mac-style visual card with floating chips -->
             <div class="hero-visual">
-                <!-- Floating tech cards -->
-                <div class="hero-float-card card-web">
-                    <i class="fas fa-globe"></i>
-                    <span>Web Dev</span>
-                </div>
-                <div class="hero-float-card card-ai">
-                    <i class="fas fa-robot"></i>
-                    <span>AI Solutions</span>
-                </div>
-                <div class="hero-float-card card-marketing">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Marketing</span>
-                </div>
-                <div class="hero-image">
-                    <div class="image-clip-wrapper">
-                        <img src="assets/hero-main-v1.webp" alt="Navabharath Technologies Web Development" class="movable-image" fetchpriority="high">
+                <div class="hero-glow-blob"></div>
+                <div class="visual-wrap">
+                    <!-- Mac-style card -->
+                    <div class="main-card">
+                        <div class="card-header-bar">
+                            <div class="card-dots">
+                                <span class="dot dot-r"></span>
+                                <span class="dot dot-y"></span>
+                                <span class="dot dot-g"></span>
+                            </div>
+                            <span class="card-label">navabharath.tech · dashboard</span>
+                        </div>
+                        <img src="assets/hero-main-v1.webp" alt="Navabharath Technologies Digital Solutions"
+                            fetchpriority="high">
+                        <div class="card-footer-bar">
+                            <div class="card-footer-text">
+                                <div class="cfooter-title">Enterprise IT Solutions</div>
+                                <div class="cfooter-sub">Powering digital transformation</div>
+                            </div>
+                            <span class="card-live-tag">LIVE ●</span>
+                        </div>
+                    </div>
+                    <!-- Floating chip 2 -->
+                    <div class="hero-chip chip2">
+                        <div class="chip-inner">
+                            <div class="chip-accent-bar" style="background:linear-gradient(180deg,#b45309,#d97706)">
+                            </div>
+                            <div>
+                                <div class="chip-label">Satisfaction</div>
+                                <div class="chip-val chip-amber">98<span class="chip-sup chip-amber">%</span></div>
+                                <div class="chip-sub">Rating 4.9 / 5 ⭐</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -241,39 +301,49 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-translate="services_title">Our Services</h2>
-                <p data-translate="services_subtitle">Comprehensive solutions for your business needs</p>
+                <div class="services-eyebrow">What We Do</div>
+                <h2 data-translate="services_title">Services That Drive Your <span class="gradient-word">Growth</span>
+                </h2>
+                <p data-translate="services_subtitle">Comprehensive solutions built for ambitious businesses</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="icon"><img src="assets/icon-web.png" alt="Web Development" loading="lazy"></div>
                     <h3 data-translate="service1_title">Web Development</h3>
-                    <p data-translate="service1_description">Custom websites built with modern technologies to ensure performance and scalability.</p>
+                    <p data-translate="service1_description">Custom websites built with modern technologies to ensure
+                        performance and scalability.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development" loading="lazy"></div>
+                    <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development" loading="lazy">
+                    </div>
                     <h3 data-translate="service2_title">Mobile App Development</h3>
-                    <p data-translate="service2_description">Native and cross-platform mobile applications designed for seamless user experiences.</p>
+                    <p data-translate="service2_description">Native and cross-platform mobile applications designed for
+                        seamless user experiences.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon"><img src="assets/icon-design.png" alt="UI/UX Design" loading="lazy"></div>
                     <h3 data-translate="service4_title">UI/UX Design</h3>
-                    <p data-translate="service4_description">User-centered design that creates engaging and intuitive digital products.</p>
+                    <p data-translate="service4_description">User-centered design that creates engaging and intuitive
+                        digital products.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing" loading="lazy"></div>
+                    <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing"
+                            loading="lazy"></div>
                     <h3 data-translate="service5_title">Digital Marketing</h3>
-                    <p data-translate="service5_description">Implementing intelligent marketing strategies to boost your online presence.</p>
+                    <p data-translate="service5_description">Implementing intelligent marketing strategies to boost your
+                        online presence.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon"><img src="assets/icon-ivr.svg" alt="IVR Solutions" loading="lazy"></div>
                     <h3 data-translate="service6_title">IVR Solutions</h3>
-                    <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate customer interactions and streamline call management.</p>
+                    <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate
+                        customer interactions and streamline call management.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon"><img src="assets/icon-gemini.svg" alt="AI Solutions" loading="lazy"></div>
                     <h3 data-translate="service7_title">AI Solutions</h3>
-                    <p data-translate="service7_description">Cutting-edge artificial intelligence and machine learning solutions to automate processes and unlock data-driven insights.</p>
+                    <p data-translate="service7_description">Cutting-edge artificial intelligence and machine learning
+                        solutions to automate processes and unlock data-driven insights.</p>
                 </div>
             </div>
         </div>
@@ -460,7 +530,8 @@
                     </div>
                     <div class="form-group">
                         <label for="phone" data-translate="form_phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" maxlength="15" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" maxlength="15"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="message" data-translate="form_message">Message</label>
@@ -527,17 +598,44 @@
 
     <script src="app.js" defer></script>
 
-
     <script>
-
-        /* ── Header Scroll Effect ── */
-        window.addEventListener('scroll', function() {
+        /* ── Glass Navbar Scroll Effect ── */
+        window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('header-solid');
+            if (window.scrollY > 40) {
+                header.classList.add('header-scrolled');
             } else {
-                header.classList.remove('header-solid');
+                header.classList.remove('header-scrolled');
             }
+        });
+
+        /* ── Custom Cursor ── */
+        const cursor = document.getElementById('cursor');
+        const ring = document.getElementById('cursorRing');
+        let rx = 0, ry = 0, mx = 0, my = 0;
+        document.addEventListener('mousemove', e => {
+            mx = e.clientX; my = e.clientY;
+            cursor.style.left = mx + 'px';
+            cursor.style.top = my + 'px';
+        });
+        (function animRing() {
+            rx += (mx - rx) * 0.14;
+            ry += (my - ry) * 0.14;
+            ring.style.left = rx + 'px';
+            ring.style.top = ry + 'px';
+            requestAnimationFrame(animRing);
+        })();
+        document.querySelectorAll('a, button, .svc-card, .service-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%,-50%) scale(2.5)';
+                ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
+                ring.style.borderColor = 'rgba(37,99,235,0.55)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+                ring.style.transform = 'translate(-50%,-50%) scale(1)';
+                ring.style.borderColor = 'rgba(37,99,235,0.3)';
+            });
         });
     </script>
 </body>
