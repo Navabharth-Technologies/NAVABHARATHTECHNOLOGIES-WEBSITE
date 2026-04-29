@@ -1759,11 +1759,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close menu when a link is clicked
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                const parentLi = link.parentElement;
+                const isDropdownTrigger = parentLi.classList.contains('has-dropdown');
+                
+                // On mobile, toggle dropdown instead of navigating if it's a dropdown trigger
+                if (window.innerWidth <= 768 && isDropdownTrigger) {
+                    const dropdown = parentLi.querySelector('.dropdown-menu');
+                    const arrow = parentLi.querySelector('.dropdown-arrow');
+                    
+                    if (dropdown) {
+                        e.preventDefault();
+                        const isActive = dropdown.classList.contains('active');
+                        
+                        if (isActive) {
+                            dropdown.classList.remove('active');
+                            if (arrow) arrow.style.transform = 'rotate(0deg)';
+                        } else {
+                            dropdown.classList.add('active');
+                            if (arrow) arrow.style.transform = 'rotate(180deg)';
+                        }
+                        return;
+                    }
+                }
+
                 navMenu.classList.remove('active');
                 const icon = hamburger.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.setAttribute('aria-hidden', 'true');
             });
         });
 
