@@ -5,6 +5,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const { Resend } = require('resend');
+const { google } = require('googleapis');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,26 @@ app.use(bodyParser.json());
 
 // Resend client
 const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy_key');
+
+// Google Drive Auth Setup
+const GOOGLE_DRIVE_FOLDER_ID = process.env.GOOGLE_DRIVE_FOLDER_ID || '0AAEQZpHWnDakUk9PVA';
+const GOOGLE_DRIVE_CREDENTIALS_PATH = process.env.GOOGLE_DRIVE_CREDENTIALS_PATH || './google-credentials.json';
+
+let driveClient = null;
+try {
+    if (fs.existsSync(GOOGLE_DRIVE_CREDENTIALS_PATH)) {
+        const auth = new google.auth.GoogleAuth({
+            keyFile: GOOGLE_DRIVE_CREDENTIALS_PATH,
+            scopes: ['https://www.googleapis.com/auth/drive.file'],
+        });
+        driveClient = google.drive({ version: 'v3', auth });
+        console.log("✔ Google Drive API configured");
+    } else {
+        console.warn(`⚠ Google credentials not found at ${GOOGLE_DRIVE_CREDENTIALS_PATH}. Drive uploads will be skipped.`);
+    }
+} catch (error) {
+    console.error("❌ Failed to initialize Google Drive client:", error);
+}
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -136,6 +157,32 @@ app.post('/send-career-email', upload.single('resume'), async (req, res) => {
         const fileContent = fs.readFileSync(resumeFile.path);
         const base64Content = fileContent.toString('base64');
 
+        let driveFileLink = null;
+        if (driveClient) {
+            try {
+                console.log("Uploading to Google Drive...");
+                const fileMetadata = {
+                    name: `Resume - ${name} - ${resumeFile.originalname}`,
+                    parents: [GOOGLE_DRIVE_FOLDER_ID],
+                };
+                const media = {
+                    mimeType: resumeFile.mimetype,
+                    body: fs.createReadStream(resumeFile.path),
+                };
+                
+                const driveResponse = await driveClient.files.create({
+                    resource: fileMetadata,
+                    media: media,
+                    fields: 'id, webViewLink',
+                });
+                
+                driveFileLink = driveResponse.data.webViewLink;
+                console.log("✔ Uploaded to Google Drive:", driveFileLink);
+            } catch (driveError) {
+                console.error("❌ Google Drive Upload Error:", driveError);
+            }
+        }
+
         // Prepare email HTML content
         const emailHTML = `
             <h2>New Job Application - Career Page</h2>
@@ -151,6 +198,7 @@ app.post('/send-career-email', upload.single('resume'), async (req, res) => {
                 ` : ''}
                 <hr style="margin: 20px 0;">
                 <p style="color: #666; font-size: 12px;">Resume is attached to this email.</p>
+                ${driveFileLink ? `<p style="color: #666; font-size: 12px;">Google Drive Link: <a href="${driveFileLink}">${driveFileLink}</a></p>` : ''}
             </div>
         `;
 
