@@ -1,0 +1,422 @@
+/* ===================================
+   PROFESSIONAL BACKGROUND ANIMATIONS
+   =================================== */
+
+/* Animated Background Container */
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.interactive-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Gradient Orbs with Smooth Animation */
+.gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.4) 0%, transparent 70%);
+    top: -15%;
+    right: -10%;
+    animation: float 25s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(118, 75, 162, 0.35) 0%, transparent 70%);
+    bottom: -15%;
+    left: -5%;
+    animation: float 30s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(240, 147, 251, 0.25) 0%, transparent 70%);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float 35s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(20px, 30px) scale(1.02);
+    }
+}
+
+/* Floating Geometric Shapes */
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.08;
+    animation: floatShapes 20s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    top: 15%;
+    left: 10%;
+    animation: floatShapes 25s ease-in-out infinite, rotate 30s linear infinite;
+}
+
+.shape-2 {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 50%;
+    top: 60%;
+    right: 15%;
+    animation: floatShapes 20s ease-in-out infinite reverse, pulse 4s ease-in-out infinite;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 30px;
+    bottom: 20%;
+    left: 20%;
+    animation: floatShapes 30s ease-in-out infinite, rotate 40s linear infinite reverse;
+}
+
+.shape-4 {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    top: 30%;
+    right: 25%;
+    animation: floatShapes 22s ease-in-out infinite, rotate 25s linear infinite;
+}
+
+.shape-5 {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    border-radius: 50%;
+    top: 70%;
+    left: 50%;
+    animation: floatShapes 28s ease-in-out infinite reverse, pulse 6s ease-in-out infinite;
+}
+
+.shape-6 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    top: 10%;
+    right: 35%;
+    animation: floatShapes 18s ease-in-out infinite, rotate 20s linear infinite, pulse 5s ease-in-out infinite;
+}
+
+@keyframes floatShapes {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(-40px) translateX(30px);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(-30px);
+    }
+
+    75% {
+        transform: translateY(-50px) translateX(20px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.08;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.15;
+        transform: scale(1.1);
+    }
+}
+
+/* Animated Grid Overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(255, 253, 240, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 253, 240, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px;
+    animation: gridMove 30s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+
+/* Particle Effect (Optional - using CSS only) */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, rgba(255, 253, 240, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 253, 240, 0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 253, 240, 0.06) 1px, transparent 1px);
+    background-size: 300px 300px, 200px 200px, 150px 150px;
+    background-position: 0 0, 50px 50px, 100px 100px;
+    animation: particleFloat 60s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@keyframes particleFloat {
+    0% {
+        background-position: 0 0, 50px 50px, 100px 100px;
+    }
+
+    100% {
+        background-position: 300px 300px, 250px 250px, 200px 200px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gradient-orb {
+        filter: blur(60px);
+    }
+
+    .orb-1 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .orb-2 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .orb-3 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .shape {
+        opacity: 0.05;
+    }
+
+    .shape-1,
+    .shape-3 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .shape-2,
+    .shape-5 {
+        width: 45px;
+        height: 45px;
+    }
+
+    .shape-4,
+    .shape-6 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .grid-overlay {
+        background-size: 60px 60px;
+        opacity: 0.2;
+    }
+}
+
+/* Performance Optimization - Reduce animations on small screens */
+@media (max-width: 480px) {
+
+    .gradient-orb,
+    .shape {
+        animation-duration: 40s !important;
+    }
+
+    .grid-overlay {
+        animation: none;
+        opacity: 0.1;
+    }
+}
+
+/* ===================================
+   ANIMATED WAVE BACKGROUNDS
+   =================================== */
+
+/* Wave Background for Sections */
+.wave-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    pointer-events: none;
+    transform: rotate(180deg);
+}
+
+.wave-path-1 {
+    fill: rgba(255, 253, 240, 0.1);
+    animation: wave1 15s ease-in-out infinite;
+}
+
+.wave-path-2 {
+    fill: rgba(255, 253, 240, 0.08);
+    animation: wave2 20s ease-in-out infinite;
+}
+
+.wave-path-3 {
+    fill: rgba(255, 253, 240, 0.05);
+    animation: wave3 25s ease-in-out infinite;
+}
+
+@keyframes wave1 {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-25%) translateY(5px);
+    }
+}
+
+@keyframes wave2 {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-15%) translateY(-8px);
+    }
+}
+
+@keyframes wave3 {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-20%) translateY(3px);
+    }
+}
+
+/* Glowing Dots Animation for CTA Section */
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+    animation: glowPulse 8s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wave-bg {
+        height: 100px;
+    }
+}

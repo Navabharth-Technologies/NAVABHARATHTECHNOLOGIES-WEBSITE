@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0DJHRSEB8S');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Explore | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
+    <meta name="description" content="Explore Navabharath Technologies.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Favicons - Optimized for Search Engines -->
+    <!-- favicon.ico for Google Search compatibility -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="favicon.ico?v=4">
+
+    <link rel="manifest" href="site.webmanifest?v=4">
+
+    <meta name="theme-color" content="#1a3c87">
+    <style>
+        .page-content {
+            padding: 40px 0 60px;
+            min-height: 60vh;
+        }
+
+        .page-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .page-content p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .explore-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .explore-section:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+
+        .explore-text {
+            flex: 1;
+        }
+
+        .explore-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .explore-image img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .explore-image img:hover {
+            transform: translateY(-10px);
+        }
+
+        @media (max-width: 968px) {
+            .explore-section {
+                flex-direction: column !important;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .explore-image img {
+                max-width: 100%;
+            }
+
+            /* Responsive Banner Fix */
+            .explore-banner {
+                height: 250px !important;
+                /* Reduced height for mobile */
+                margin-top: 80px !important;
+                /* Push down due to fixed header */
+            }
+
+            .explore-banner h1 {
+                font-size: 2rem !important;
+                /* Smaller title */
+            }
+
+            .explore-banner p {
+                font-size: 1rem !important;
+                padding: 0 20px;
+            }
+        }
+    </style>
+    <link rel="preload" as="image" href="assets/explore-banner.jpg" fetchpriority="high">
+</head>
+
+<body>
+    <!-- CustomNotification -->
+    <div id="customNotification" class="custom-notification"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="navabharath-portfolio">Portfolio</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="explore-banner"
+        style="margin-top: 0; position: relative; width: 100%; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img fetchpriority="high" src="assets/explore-banner.jpg" alt="Explore Banner" class="animated-banner-img" loading="eager"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+        <div
+            style="position: relative; z-index: 2; text-align: center; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+            <h1 style="font-size: 3.5rem; margin: 0; font-weight: bold;" data-translate="explore_banner_title">Explore
+            </h1>
+            <p style="font-size: 1.2rem; margin-top: 10px; max-width: 600px;" data-translate="explore_banner_desc">
+                Discover our journey, mission, and vision
+            </p>
+        </div>
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)); z-index: 1;">
+        </div>
+    </div>
+
+    <main class="container page-content">
+        <!-- Intro Section -->
+        <section class="explore-section">
+            <div class="explore-text">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color);"
+                    data-translate="explore_intro_title">Navabharath Technologies : Empowering Growth Through Smart IT
+                    Solutions</h2>
+                <p data-translate="explore_intro_desc">Navabharath Technologies is a forward:thinking IT solutions
+                    company delivering smart, scalable, & results-driven digital services. With a strong focus on
+                    innovation & customer-centric design, we help businesses transform, automate, & grow in today's
+                    fast-evolving digital world. Backed by an experienced team & modern technologies, we ensure seamless
+                    execution, optimized workflows, & high-quality delivery. Our dedication to excellence, transparency,
+                    and reliability makes us a trusted partner for businesses of all sizes.</p>
+            </div>
+            <div class="explore-image">
+                <img src="assets/explore-tech-devices.jpg" alt="Smart Technology Solutions" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="explore-section">
+            <div class="explore-text">
+                <h1 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"
+                    data-translate="explore_mission_title">Our Mission</h1>
+                <p data-translate="explore_mission_p1">Our mission is to empower businesses with advanced digital
+                    solutions that accelerate growth & strengthen their competitive edge. We focus on enhancing
+                    operational efficiency through smart, automated, & scalable technologies that streamline every
+                    workflow. By delivering high-quality digital experiences, we ensure long-term success & sustainable
+                    development for our clients. We continuously innovate and adapt to evolving industry needs to
+                    deliver modern, future-ready solutions. Through our commitment to excellence, we strive to create
+                    meaningful value & help businesses operate smarter, faster, & more efficiently.</p>
+            </div>
+            <div class="explore-image">
+                <img src="assets/mission-target.jpg" alt="Our Mission - Hitting the Target" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="explore-section">
+            <div class="explore-text">
+                <h1 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"
+                    data-translate="explore_vision_title">Our Vision</h1>
+                <p data-translate="explore_vision_p1">Our vision is to become a globally recognized technology leader
+                    admired for innovation and forward-thinking solutions. We aim to consistently deliver exceptional
+                    value that drives measurable growth & creates lasting impact for businesses worldwide. By
+                    prioritizing customer satisfaction, we strive to build meaningful relationships rooted in trust and
+                    excellence.</p>
+            </div>
+            <div class="explore-image">
+                <img src="assets/vision-lightbulb.jpg" alt="Our Vision - Innovation and Bright Ideas" loading="lazy">
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="explore-section">
+            <div class="explore-text">
+                <h1 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"
+                    data-translate="explore_what_do_title">What We Do</h1>
+                <p style="margin-bottom: 15px;" data-translate="explore_what_do_1">Building custom websites,
+                    applications, & digital products designed for long-term performance.</p>
+                <p style="margin-bottom: 15px;" data-translate="explore_what_do_2">Smart strategies & technologies that
+                    match your goals and workflow.</p>
+                <p style="margin-bottom: 15px;" data-translate="explore_what_do_3">Robust, reliable, & optimized digital
+                    systems for maximum efficiency.</p>
+                <p style="margin-bottom: 15px;" data-translate="explore_what_do_4">Solutions crafted with usability,
+                    experience, & business impact in mind.</p>
+            </div>
+            <div class="explore-image">
+                <img src="assets/software-process.png" alt="Team Software Process - Our Development Workflow"
+                    loading="lazy">
+            </div>
+        </section>
+
+        <!-- Trust Section (Full Width) -->
+        <section class="explore-section"
+            style="display: block; text-align: center; max-width: 100%; margin: 0 auto 80px;">
+            <h1 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 40px;"
+                data-translate="explore_trust_title">Why Businesses Trust Us</h1>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: left;">
+                <div class="trust-card"
+                    style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <strong style="color: var(--primary-color); font-size: 1.1rem; display: block; margin-bottom: 10px;"
+                        data-translate="explore_trust_1_title">1. Innovation-Driven Approach</strong>
+                    <span data-translate="explore_trust_1_desc">We use modern tools and best practices to deliver
+                        future-ready solutions.</span>
+                </div>
+
+                <div class="trust-card"
+                    style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <strong style="color: var(--primary-color); font-size: 1.1rem; display: block; margin-bottom: 10px;"
+                        data-translate="explore_trust_2_title">2. Customer-Centric Execution</strong>
+                    <span data-translate="explore_trust_2_desc">Every project is personalized to your business goals &
+                        workflows.</span>
+                </div>
+
+                <div class="trust-card"
+                    style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <strong style="color: var(--primary-color); font-size: 1.1rem; display: block; margin-bottom: 10px;"
+                        data-translate="explore_trust_3_title">3. Skilled Professionals</strong>
+                    <span data-translate="explore_trust_3_desc">A team that blends creativity, expertise, & industry
+                        knowledge.</span>
+                </div>
+
+                <div class="trust-card"
+                    style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <strong style="color: var(--primary-color); font-size: 1.1rem; display: block; margin-bottom: 10px;"
+                        data-translate="explore_trust_4_title">4. Quality & Transparency</strong>
+                    <span data-translate="explore_trust_4_desc">Clear communication, reliable processes, & timely
+                        delivery at every stage.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy">
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_links_title">Company</h4>
+                <ul>
+                    <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="footer_about">About</a></li>
+                    <li><a href="index.html#services" data-translate="footer_services">Services</a></li>
+                    <li><a href="navabharath-portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact" data-translate="footer_contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_support">Support</h4>
+                <ul>
+                    <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_careers">Careers</h4>
+                <ul>
+                    <li><a href="careers.html" data-translate="footer_join_team">Join our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-translate="footer_social_title">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
+                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
+                        aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@NavabharathTechnologies" aria-label="YouTube" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer_copyright">&copy; 2026 Navabharath Technologies. All rights reserved.</p>
+        </div>
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

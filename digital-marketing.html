@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0DJHRSEB8S');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/DMlogo.png">
+    <link rel="preload" as="image" href="/assets/hero.webp">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Navabharath Technologies - Leading Digital Marketing Agency. Transform your online presence with our expert SEO, Social Media, Content Marketing, and PPC services.">
+    <meta name="keywords"
+        content="digital marketing, SEO, social media marketing, content marketing, PPC, email marketing, analytics">
+    <title>Digital Marketing | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
+
+    <!-- Favicons - Optimized for Search Engines -->
+    <!-- favicon.ico for Google Search compatibility -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="favicon.ico?v=4">
+
+    <link rel="manifest" href="site.webmanifest?v=4">
+
+    <!-- Font Loading Strategy: Combine preload and stylesheet -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="digital-marketing.css">
+    <link rel="stylesheet" href="bg-animations.css">
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div id="shockwave-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <img src="assets/dm.png" alt="Navabharath Technologies Logo" class="logo-img" width="180"
+                        height="50" decoding="async" loading="lazy">
+                </a>
+                <div class="brand-info">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-name">Navabharath Technologies</h1>
+                        <div class="brand-underline"></div>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#contact" class="btn btn-primary">Get My Free Audit</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Animated Background Elements -->
+        <div class="animated-bg">
+            <canvas id="interactive-hero-canvas" class="interactive-canvas"></canvas>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+            </div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Digital Marketing Excellence</p>
+                <h2 class="hero-title">Transform Your Brand with Data-Driven Marketing</h2>
+                <p class="hero-description">
+                    Transform your online presence with Navabharath Technologies. Our intelligent results-focused
+                    digital marketing solutions are built to amplify brand visibility, strengthen customer engagement, &
+                    accelerate sustainable business growth. We combine strategy, creativity, & analytics to deliver
+                    marketing that truly performs.
+
+                </p>
+
+            </div>
+            <form class="hero-form" id="auditForm">
+                <h3>Get Your Free Audit</h3>
+                <div class="form-group">
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <div class="phone-group-wrapper">
+                        <select name="country_code" class="country-select">
+                            <option value="+91">+91 (IN)</option>
+                            <option value="+1">+1 (US)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+971">+971 (AE)</option>
+                            <option value="+61">+61 (AU)</option>
+                        </select>
+                        <input type="tel" name="phone" placeholder="98765 43210" maxlength="10" minlength="10"
+                            pattern="\d{10}" title="Please enter a valid 10-digit phone number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="project" placeholder="Tell Us About Your Project" rows="2"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">Get My Free Audit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <!-- Animated Wave Background -->
+        <svg class="wave-bg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25" class="wave-path-1"></path>
+            <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5" class="wave-path-2"></path>
+            <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                class="wave-path-3"></path>
+        </svg>
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Expertise</p>
+                <h2 class="section-title">Comprehensive Digital Marketing Solutions</h2>
+                <p class="section-description">
+                    From strategy to execution, we provide end-to-end digital marketing services tailored to your
+                    business goals.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Search Engine Optimization</h3>
+                            <div class="service-icon">
+                                <img src="assets/seo-card.png" alt="SEO" loading="lazy" width="200" height="200"
+                                    decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Dominate search rankings with our proven SEO strategies. We optimize your website for
+                                maximum
+                                visibility, organic traffic, and sustainable growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Social Media Marketing</h3>
+                            <div class="service-icon">
+                                <img src="assets/social-media-card.jpeg" alt="Social Media" loading="lazy" width="200"
+                                    height="200" decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Build meaningful connections with your audience. Our social media experts create engaging
+                                content
+                                and campaigns that drive brand awareness and loyalty.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Content Marketing</h3>
+                            <div class="service-icon">
+                                <img src="assets/content-marketing-card.jpg" alt="Content Marketing" loading="lazy"
+                                    width="200" height="200" decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Tell your brand story with compelling content. We create valuable, relevant content that
+                                attracts, engages, and converts your target audience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Pay-Per-Click Advertising</h3>
+                            <div class="service-icon">
+                                <img src="assets/ppc-card.jpg" alt="Pay-Per-Click Advertising" loading="lazy"
+                                    width="200" height="200" decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Maximize ROI with targeted PPC campaigns. Our data-driven approach ensures every dollar
+                                spent
+                                delivers measurable results and qualified leads.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Email Marketing</h3>
+                            <div class="service-icon">
+                                <img src="assets/email-marketing-card.jpg" alt="Email Marketing" loading="lazy"
+                                    width="200" height="200" decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Nurture leads and retain customers with personalized email campaigns. We craft messages
+                                that
+                                resonate and drive action.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-wrapper scroll-reveal">
+                    <div class="service-card">
+                        <div class="service-card-front">
+                            <h3>Analytics & Reporting</h3>
+                            <div class="service-icon">
+                                <img src="assets/analytics-card.jpg" alt="Analytics & Reporting" loading="lazy"
+                                    width="200" height="200" decoding="async">
+                            </div>
+                        </div>
+                        <div class="service-card-back">
+                            <p>Make informed decisions with comprehensive analytics. We track, measure, and optimize
+                                every
+                                aspect of your digital marketing performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+
+    <!-- Case Studies Section -->
+    <section class="case-studies" id="case-studies">
+        <canvas id="industries-snow-canvas" class="snow-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Serve</h2>
+            </div>
+
+            <div class="industries-container">
+                <!-- Row 1: Right -->
+                <div class="industry-row row-right">
+                    <div class="industry-track">
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="shirt"></i></div>
+                            <h3>Fashion</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="sparkles"></i></div>
+                            <h3>Cosmetics</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="utensils"></i></div>
+                            <h3>Food</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="stethoscope"></i></div>
+                            <h3>Healthcare</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="home"></i></div>
+                            <h3>RealEstate</h3>
+                        </div>
+                        <!-- Duplicate for infinite -->
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="shirt"></i></div>
+                            <h3>Fashion</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="sparkles"></i></div>
+                            <h3>Cosmetics</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="utensils"></i></div>
+                            <h3>Food</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="stethoscope"></i></div>
+                            <h3>Healthcare</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="home"></i></div>
+                            <h3>RealEstate</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Left -->
+                <div class="industry-row row-left">
+                    <div class="industry-track">
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="pill"></i></div>
+                            <h3>Supplements</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="gem"></i></div>
+                            <h3>Jewellery</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="apple"></i></div>
+                            <h3>Lifestyle</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="graduation-cap"></i></div>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="shopping-cart"></i></div>
+                            <h3>Ecommerce</h3>
+                        </div>
+                        <!-- Duplicate for infinite -->
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="pill"></i></div>
+                            <h3>Supplements</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="gem"></i></div>
+                            <h3>Jewellery</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="apple"></i></div>
+                            <h3>Lifestyle</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="graduation-cap"></i></div>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="shopping-cart"></i></div>
+                            <h3>Ecommerce</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Right -->
+                <div class="industry-row row-right">
+                    <div class="industry-track">
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="cpu"></i></div>
+                            <h3>Technology</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="plane"></i></div>
+                            <h3>Travel</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="mic"></i></div>
+                            <h3>Events</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="zap"></i></div>
+                            <h3>Energy</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="plus"></i></div>
+                            <h3>More</h3>
+                        </div>
+                        <!-- Duplicate for infinite -->
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="cpu"></i></div>
+                            <h3>Technology</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="plane"></i></div>
+                            <h3>Travel</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="mic"></i></div>
+                            <h3>Events</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="zap"></i></div>
+                            <h3>Energy</h3>
+                        </div>
+                        <div class="industry-card">
+                            <div class="industry-icon-circle"><i data-lucide="plus"></i></div>
+                            <h3>More</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+
+
+
+            <div id="gravity-container" class="gravity-wrapper">
+                <!-- Fallback content in case JS fails -->
+                <div class="static-tags"
+                    style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px; height: 100%; align-content: center;">
+                    <span class="static-pill"
+                        style="background:#fce7f3; color:#be185d; padding:8px 16px; border-radius:20px; font-weight:bold;">#Strategy</span>
+                    <span class="static-pill"
+                        style="background:#fbcfe8; color:#9d174d; padding:8px 16px; border-radius:20px; font-weight:bold;">#Marketing</span>
+                    <span class="static-pill"
+                        style="background:#bfdbfe; color:#1e40af; padding:8px 16px; border-radius:20px; font-weight:bold;">#Development</span>
+                    <span class="static-pill"
+                        style="background:#ffedd5; color:#c2410c; padding:8px 16px; border-radius:20px; font-weight:bold;">#Design</span>
+                    <span class="static-pill"
+                        style="background:#e9d5ff; color:#6b21a8; padding:8px 16px; border-radius:20px; font-weight:bold;">#SEO</span>
+                    <span class="static-pill"
+                        style="background:#ddd6fe; color:#5b21b6; padding:8px 16px; border-radius:20px; font-weight:bold;">#Content</span>
+                    <span class="static-pill"
+                        style="background:#fda4af; color:#9f1239; padding:8px 16px; border-radius:20px; font-weight:bold;">#Social</span>
+                    <span class="static-pill"
+                        style="background:#cbd5e1; color:#334155; padding:8px 16px; border-radius:20px; font-weight:bold;">#PPC</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA/Contact Section -->
+    <section class="cta" id="contact">
+        <div class="cta-container">
+            <div class="section-header">
+                <p class="section-subtitle">Get Started Today</p>
+                <h2 class="section-title">Ready to Transform Your Digital Presence?</h2>
+                <p class="section-description">
+                    Let's discuss how our digital marketing expertise can help your business achieve its goals. Fill out
+                    the form below and our team will get back to you within 24 hours.
+                </p>
+            </div>
+
+            <form class="cta-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="fullName" placeholder="Enter your full name" required
+                        pattern="[A-Za-z\s]+" title="Only text (letters and spaces) are allowed"
+                        oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-group-wrapper">
+                        <select name="country_code" class="country-select">
+                            <option value="+91">+91 (IN)</option>
+                            <option value="+1">+1 (US)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+971">+971 (AE)</option>
+                            <option value="+61">+61 (AU)</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" placeholder="98765 43210" maxlength="10"
+                            minlength="10" pattern="\d{10}" title="Please enter a valid 10-digit phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Project *</label>
+                    <textarea id="message" name="project"
+                        placeholder="Describe your digital marketing needs and goals..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Interactive Floating Moon -->
+            <div class="moon-box">
+                <div class="moon-aura"></div>
+                <div class="moon">
+                    <div class="crater crater-1"></div>
+                    <div class="crater crater-2"></div>
+                    <div class="crater crater-3"></div>
+                    <div class="crater crater-4"></div>
+                    <div class="crater crater-5"></div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy"
+                    style="max-width: 150px; margin-bottom: 15px; border-radius: 20px;">
+                <h3>Navabharath Technologies</h3>
+                <p>Leading IT solutions provider delivering innovative digital products and comprehensive digital
+                    marketing services.</p>
+                <div class="social-links">
+                    <a href="https://www.navabharathtechnologies.com" class="social-link" target="_blank"
+                        title="Website">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/navabharathtechnologies/" class="social-link" title="Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61584661233790" class="social-link"
+                        title="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/?viewAsMember=true"
+                        class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@NavabharathTechnologies" class="social-link" title="YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                            </path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">SEO Optimization</a>
+                <a href="#services">Social Media Marketing</a>
+                <a href="#services">Content Marketing</a>
+                <a href="#services">PPC Advertising</a>
+                <a href="#services">Email Marketing</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Careers</h3>
+                <a href="careers.html">Join our Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <a href="mailto:marketing@navabharathtechnologies.com">marketing@navabharathtechnologies.com</a>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fas fa-globe"></i></span>
+                        <a href="https://www.navabharathtechnologies.com"
+                            target="_blank">www.navabharathtechnologies.com</a>
+                    </li>
+                </ul>
+                <p>Transform your business with our digital solutions</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Navabharath Technologies. All rights reserved. | Smarter Solutions for Better Future</p>
+        </div>
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Professional Success Modal -->
+    <div id="thankYouModal" class="unique-modal-overlay">
+        <div class="unique-modal-card">
+            <div class="success-icon-box">
+                <div class="icon-ring"></div>
+                <div class="icon-check">&#10003;</div>
+            </div>
+            <div class="unique-modal-text">
+                <h2>Submission Received!</h2>
+                <div class="text-divider"></div>
+                <p>Establishing digital connection... Your project brief has been successfully transmit to our core
+                    strategy team. Expect a decyphered response within 24 hours.</p>
+            </div>
+            <button id="closeModalBtn" class="modal-close-btn">Return to Base</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="digital-marketing.js" defer></script>
+</body>
+
+</html>

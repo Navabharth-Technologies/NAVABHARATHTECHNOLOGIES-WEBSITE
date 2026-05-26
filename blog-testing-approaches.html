@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0DJHRSEB8S');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Software Testing | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
+    <meta name="description"
+        content="Understand the differences between manual testing vs automation testing to choose the right strategy for real software projects.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Favicons - Optimized for Search Engines -->
+    <!-- favicon.ico for Google Search compatibility -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="favicon.ico?v=4">
+
+    <link rel="manifest" href="site.webmanifest?v=4">
+
+    <style>
+        .blog-post-content {
+            padding: 100px 0 60px !important;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .blog-post-title-container {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .blog-post-main-title {
+            font-family: 'DM Serif Text', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-main-title {
+                font-size: 2rem;
+            }
+        }
+
+        .blog-post-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .blog-meta-single {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .blog-featured-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 12px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .blog-body h2 {
+            font-size: 1.8rem;
+            color: #1a3c87 !important;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .blog-body h3 {
+            font-size: 1.4rem;
+            color: #1a3c87 !important;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .blog-body p {
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .blog-body ul {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            list-style-type: disc;
+        }
+
+        .blog-body li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-featured-image {
+                max-height: 300px;
+            }
+        }
+    </style>
+    <link rel="preload" as="image" href="assets/testing%2011.png" fetchpriority="high">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="navabharath-portfolio">Portfolio</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <article class="container blog-post-content">
+
+            <div class="blog-post-title-container">
+                <h1 class="blog-post-main-title">Modern Software Testing: A Guide to Different Testing Approaches</h1>
+            </div>
+
+            <img fetchpriority="high" src="assets/testing%2011.png" alt="Manual vs Automation Testing" class="blog-featured-image" loading="eager">
+
+            <div class="blog-body">
+                <h2>Introduction</h2>
+                <p>Software testing plays a critical role in delivering reliable and high-quality applications. In modern software development, teams often rely on two main testing approaches: manual testing and automation testing. Each method has its own advantages, limitations, and ideal scenarios. Understanding the differences between manual testing vs automation testing helps organizations choose the right strategy for their real software projects. While manual testing focuses on human interaction and exploratory testing, automation testing uses tools and scripts to execute tests quickly and efficiently.</p>
+                
+                <h2>Understanding Manual Testing</h2>
+                <p>Manual testing involves testers executing test cases manually without using automated tools. Testers simulate real user behavior by interacting with the software to identify defects, usability problems, and functional errors.</p>
+                <p>Manual testing is particularly useful when testing new features, UI elements, and scenarios where human judgment is required.</p>
+                
+                <img src="assets/testing%201.png" alt="Understanding Manual Testing" class="content-image" loading="lazy">
+                
+                <h2>Understanding Automation Testing</h2>
+                <p>Automation testing involves using testing tools and scripts to automatically execute predefined test cases. Popular automation tools include Selenium, Cypress, Playwright, and TestNG. Automation testing is designed to reduce manual effort and increase testing speed, especially in large and complex projects.</p>
+                <p>Automation testing is highly effective for tasks that need to be repeated frequently during the development lifecycle.</p>
+                <p>Automation testing is widely used in projects that require continuous integration and continuous delivery (CI/CD).</p>
+
+                <img src="assets/testing%202.png" alt="Understanding Automation Testing" class="content-image" loading="lazy">
+
+                <h2>Manual Testing vs Automation Testing in Real Projects</h2>
+                <p>In real software development projects, most companies adopt a hybrid testing approach that combines manual and automation testing.</p>
+                
+                <h3>Manual testing is best suited for:</h3>
+                <ul>
+                    <li>UI and usability testing</li>
+                    <li>Exploratory testing</li>
+                    <li>Short-term or small projects</li>
+                </ul>
+
+                <h3>Automation testing works best for:</h3>
+                <ul>
+                    <li>Regression testing</li>
+                    <li>Performance testing</li>
+                    <li>Repetitive test scenarios</li>
+                </ul>
+                <p>By integrating both approaches, teams can achieve better software quality, improved efficiency, and faster product releases.</p>
+                
+                <h2>Conclusion</h2>
+                <img src="assets/testing%20conclusion.png" alt="Conclusion: Manual vs Automation Testing" class="content-image" loading="lazy">
+                <p>Manual testing is essential for evaluating usability, user experience, and exploratory scenarios. Automation testing improves efficiency by handling repetitive and large-scale testing tasks. Most modern development teams use a combination of manual and automation testing for optimal results. The choice between manual testing vs automation testing depends on project requirements, timeline, and testing complexity. Using the right balance between both methods ensures high-quality software and faster delivery in real projects.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="blog.html" class="btn btn-primary">Back to Blog</a>
+            </div>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Navabharath Technologies" loading="lazy">
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="navabharath-portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Careers</h4>
+                <ul>
+                    <li><a href="careers.html">Join our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
+                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
+                        aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@NavabharathTechnologies" aria-label="YouTube" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Navabharath Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@custom-variant dark (&:is(.dark *));
+
+/* Custom Utilities */
+@layer utilities {
+  .glass-card {
+    @apply bg-white/75 dark:bg-[#0f172a]/75 backdrop-blur-md border border-[#0ea5e9]/20 dark:border-[#38bdf8]/20 shadow-[0_4px_20px_-4px_rgba(14,165,233,0.1)] dark:shadow-black/50 transition-all duration-300;
+  }
+  
+  .glass-card-hover {
+    @apply hover:bg-white/90 dark:hover:bg-[#1e293b]/80 hover:border-[#0ea5e9]/40 dark:hover:border-[#38bdf8]/50 hover:shadow-[0_8px_30px_-4px_rgba(14,165,233,0.2)] dark:hover:shadow-[#38bdf8]/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01];
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0EA5E9] via-blue-500 to-indigo-600 dark:from-[#38BDF8] dark:via-blue-400 dark:to-indigo-500;
+  }
+  
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-[#0EA5E9] dark:from-emerald-400 dark:to-[#38BDF8];
+  }
+  
+  .bg-gradient-premium {
+    @apply bg-gradient-to-br from-[#f8fbff] via-[#f0f6ff] to-[#e0efff] dark:from-[#020617] dark:via-[#0b1220] dark:to-[#0f172a];
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}

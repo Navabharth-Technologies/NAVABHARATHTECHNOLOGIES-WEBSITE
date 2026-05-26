@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0DJHRSEB8S');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Privacy Policy | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
+    <meta name="description" content="Privacy Policy for Navabharath Technologies.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Favicons - Optimized for Search Engines -->
+    <!-- favicon.ico for Google Search compatibility -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png?v=4">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="favicon.ico?v=4">
+
+    <link rel="manifest" href="site.webmanifest?v=4">
+
+    <meta name="theme-color" content="#1a3c87">
+    <style>
+        .page-content {
+            padding: 60px 0 80px;
+            min-height: 60vh;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .page-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .privacy-section {
+            margin-bottom: 45px;
+        }
+
+        .privacy-section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .page-content p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .privacy-section ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .privacy-section strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .privacy-section a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .privacy-section a:hover {
+            color: #0d2456;
+        }
+
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 40px 20px 60px;
+            }
+
+            .page-content h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .page-content p,
+            .privacy-section li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link rel="preload" as="image" href="assets/privacy-banner.jpg" fetchpriority="high">
+</head>
+
+<body>
+    <!-- Custom Notification -->
+    <div id="customNotification" class="custom-notification"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70"
+                        loading="eager" fetchpriority="high">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="navabharath-portfolio">Portfolio</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Spanish</div>
+                        <div class="lang-option" data-lang="fr">French</div>
+                        <div class="lang-option" data-lang="de">German</div>
+                        <div class="lang-option" data-lang="it">Italian</div>
+                        <div class="lang-option" data-lang="pt">Portuguese</div>
+                        <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
+                <button class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="voice-search-btn" id="voiceSearchBtn" aria-label="Voice Search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="explore-banner"
+        style="margin-top: 0; position: relative; width: 100%; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img fetchpriority="high" src="assets/privacy-banner.jpg" alt="Privacy Policy Banner" loading="eager"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+        <div
+            style="position: relative; z-index: 2; text-align: center; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+            <h1 style="font-size: 3.5rem; margin: 0; font-weight: bold;" data-translate="privacy_title">Privacy Policy
+            </h1>
+        </div>
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)); z-index: 1;">
+        </div>
+    </div>
+
+    <main class="container page-content">
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec1_title">1. Information We Collect</h2>
+            <p><strong data-translate="privacy_sec1_strong1">Directly from Users:</strong> <span
+                    data-translate="privacy_sec1_p1">Name, email, phone number, company name, and message content
+                    submitted via the "Contact Us" form.</span></p>
+            <p><strong data-translate="privacy_sec1_strong2">Automatically Collected:</strong> <span
+                    data-translate="privacy_sec1_p2">IP address, browser type, operating system, pages visited, and time
+                    spent on site (via cookies/analytics).</span></p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec2_title">2. How We Use the Information</h2>
+            <ul>
+                <li data-translate="privacy_sec2_li1">To respond to inquiries (the primary use of the contact form
+                    data).</li>
+                <li data-translate="privacy_sec2_li2">To improve the website and marketing efforts.</li>
+                <li data-translate="privacy_sec2_li3">For internal record-keeping and billing related to services
+                    provided.</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec3_title">3. Data Sharing and Disclosure</h2>
+            <p><strong data-translate="privacy_sec3_strong1">Service Providers:</strong> <span
+                    data-translate="privacy_sec3_p1">We may share data with third-party vendors (e.g., hosting
+                    providers, CRM software, Google Analytics) who process data on our behalf.</span></p>
+            <p><strong data-translate="privacy_sec3_strong2">Legal Compliance:</strong> <span
+                    data-translate="privacy_sec3_p2">We may disclose information if required by law, court order, or
+                    government request.</span></p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec4_title">4. Data Retention</h2>
+            <p data-translate="privacy_sec4_p1">We retain contact inquiries for a specific period (e.g., 2 years) and
+                client data for the duration of the contract plus a standard retention period (e.g., 5 years) for legal
+                and tax purposes.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec5_title">5. Cookies and Tracking</h2>
+            <p data-translate="privacy_sec5_p1">We use cookies (e.g., functional, analytical) to enhance your
+                experience. You can choose to disable cookies through your individual browser options.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec6_title">6. User Rights</h2>
+            <p data-translate="privacy_sec6_p1">Depending on your location, you may have rights such as the right to
+                access, correct, or delete your
+                personal data. Please contact us to exercise these rights.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec7_title">7. Security</h2>
+            <p data-translate="privacy_sec7_p1">We implement general security measures, including secure servers and
+                encryption, to protect your data
+                from unauthorized access, alteration, or disclosure.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec8_title">8. International Transfers</h2>
+            <p data-translate="privacy_sec8_p1">If you are accessing our services from outside India, please be aware
+                that your information may be
+                transferred to, stored, and processed in India where our servers are located.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2 data-translate="privacy_sec9_title">9. Contact Information</h2>
+            <p data-translate="privacy_sec9_p1">If you have any questions about this Privacy Policy, please contact us
+                at:</p>
+            <p><a href="mailto:contact@navabharathtechnologies.com">contact@navabharathtechnologies.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy">
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_links_title">Company</h4>
+                <ul>
+                    <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="footer_about">About</a></li>
+                    <li><a href="index.html#services" data-translate="footer_services">Services</a></li>
+                    <li><a href="navabharath-portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact" data-translate="footer_contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_support">Support</h4>
+                <ul>
+                    <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_careers">Careers</h4>
+                <ul>
+                    <li><a href="careers.html" data-translate="footer_join_team">Join our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-translate="footer_social_title">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
+                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
+                        aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@NavabharathTechnologies" aria-label="YouTube" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer_copyright">&copy; 2026 Navabharath Technologies. All rights reserved.</p>
+        </div>
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DJHRSEB8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0DJHRSEB8S');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Blog & Insights | Navabharath Technologies - Web Development, AI & Digital Marketing</title>
+    <meta name="description" content="Read the latest insights, trends, and news from Navabharath Technologies.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    <link rel="manifest" href="site.webmanifest?v=4">
+    <meta name="theme-color" content="#0f1e42">
+</head>
+
+<body>
+    <!-- CustomNotification -->
+    <div id="customNotification" class="custom-notification"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/header-logo.png" alt="Navabharath Technologies" width="180" height="70" loading="eager">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="nav_about">About</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="navabharath-portfolio">Portfolio</a></li>
+                        <li class="has-dropdown">
+                            <a href="resources.html" data-translate="nav_resources">Resources <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="resources.html#documentation"><i class="fas fa-book"></i> Documentation</a></li>
+                                <li><a href="blog.html"><i class="fas fa-rss"></i> Blogs</a></li>
+                                <li><a href="resources.html#video-tutorials"><i class="fas fa-play-circle"></i> Video Tutorials</a></li>
+                                <li><a href="resources.html#downloads"><i class="fas fa-download"></i> Downloads</a></li>
+                                <li><a href="resources.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                                <li><a href="resources.html#developer-tools"><i class="fas fa-code"></i> Developer Tools</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="careers.html" data-translate="nav_careers">Careers</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact" class="btn-contact-cta">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="langDropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Hero Section -->
+        <section class="blog-hero">
+            <div class="mesh-gradient">
+                <div class="mesh-ball ball-1"></div>
+                <div class="mesh-ball ball-2"></div>
+                <div class="mesh-ball ball-3"></div>
+            </div>
+            <div class="blog-hero-content">
+                <h1 data-translate="blog_banner_title">The Insight Hub</h1>
+                <p data-translate="blog_banner_desc">Exploring the frontiers of technology, innovation, and digital growth.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Featured Post -->
+            <section class="featured-section">
+                <article class="featured-card">
+                    <a href="blog-metaverse.html" class="full-card-link" aria-label="Read Metaverse Vision Decoded"></a>
+                    <div class="featured-image">
+                        <img src="assets/meta%201.png" alt="Metaverse Vision Decoded">
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-badge">Featured Post</span>
+                        <h2 class="featured-title">Metaverse Vision Decoded: How Virtual Worlds Are Shaping the Future of the Internet</h2>
+                        <p class="blog-excerpt">The metaverse is emerging as a revolutionary concept redefining how we experience the internet through immersive virtual worlds.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 29, 2026</span>
+                            <span><i class="far fa-user"></i> Tech Team</span>
+                        </div>
+                        <a href="blog-metaverse.html" class="read-more">
+                            <span>Read Full Story</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Topic Filters -->
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">All Topics</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+                <button class="filter-btn" data-filter="career">Career</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid" id="blogGrid">
+                <article class="blog-card" data-category="technology">
+                    <a href="blog-metaverse.html" class="full-card-link" aria-label="Read Metaverse Vision Decoded"></a>
+                    <div class="blog-image">
+                        <img src="assets/meta%201.png" alt="Metaverse Vision Decoded" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 29, 2026</span>
+                            <span><i class="far fa-user"></i> Tech Team</span>
+                        </div>
+                        <h3 class="blog-title">Metaverse Vision Decoded: How Virtual Worlds Are Shaping the Future of the Internet</h3>
+                        <p class="blog-excerpt">The metaverse is emerging as a revolutionary concept redefining how we experience the internet through immersive virtual worlds.</p>
+                        <a href="blog-metaverse.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Blog Post 7 -->
+                <article class="blog-card" data-category="technology">
+                    <a href="blog-self-healing.html" class="full-card-link" aria-label="Read Self-Healing Software Systems"></a>
+                    <div class="blog-image">
+                        <img src="assets/self1.webp" alt="Self-Healing Software Systems" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 29, 2026</span>
+                            <span><i class="far fa-user"></i> Tech Team</span>
+                        </div>
+                        <h3 class="blog-title">Self-Healing Software Systems: Improving Reliability in Modern IT Infrastructure</h3>
+                        <p class="blog-excerpt">Self-healing software systems continuously monitor, detect, and resolve technical issues in real time, improving system resilience.</p>
+                        <a href="blog-self-healing.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-category="technology">
+                    <a href="blog-testing-approaches.html" class="full-card-link" aria-label="Read Manual vs Automation Testing"></a>
+                    <div class="blog-image">
+                        <img src="assets/testing%2011.png" alt="Manual vs Automation Testing" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Feb 21, 2026</span>
+                            <span><i class="far fa-user"></i> Growth Team</span>
+                        </div>
+                        <h3 class="blog-title">Manual vs Automation Testing: Which Approach Works Best?</h3>
+                        <p class="blog-excerpt">Software testing plays a critical role in delivering reliable and high-quality applications. Understand the differences to choose the right strategy.</p>
+                        <a href="blog-testing-approaches.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-category="strategy">
+                    <a href="blog-erp-crm-roi.html" class="full-card-link" aria-label="Read ROI of Custom ERP/CRM"></a>
+                    <div class="blog-image">
+                        <img src="assets/roi.png" alt="Custom ERP/CRM" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Feb 15, 2026</span>
+                            <span><i class="far fa-user"></i> Strategy Team</span>
+                        </div>
+                        <h3 class="blog-title">The ROI of Custom ERP/CRM Solutions</h3>
+                        <p class="blog-excerpt">Investing in custom ERP and CRM development can reduce operational waste, improve sales visibility, and unify data.</p>
+                        <a href="blog-erp-crm-roi.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-category="technology">
+                    <a href="blog-cloud-security.html" class="full-card-link" aria-label="Read AI Agents Quantum Leap"></a>
+                    <div class="blog-image">
+                        <img src="assets/quantum-leap-hero-v2.jpg" alt="AI Agents Quantum Leap" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jan 29, 2026</span>
+                            <span><i class="far fa-user"></i> Security Team</span>
+                        </div>
+                        <h3 class="blog-title">Quantum Leap: AI Agents in 2030</h3>
+                        <p class="blog-excerpt">In 2030, software services won't just do what you ask them to; they'll guess what you need and make decisions.</p>
+                        <a href="blog-cloud-security.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-category="strategy">
+                    <a href="blog-web-development.html" class="full-card-link" aria-label="Read Page Speed Optimization"></a>
+                    <div class="blog-image">
+                        <img src="assets/page-speed-optimization.png" alt="Page Speed" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jan 07, 2026</span>
+                            <span><i class="far fa-user"></i> Web Dev Team</span>
+                        </div>
+                        <h3 class="blog-title">Why Page Speed Optimization is Crucial in 2026</h3>
+                        <p class="blog-excerpt">Learn how fast-loading pages impact SEO performance, user experience, and conversion rates in the modern era.</p>
+                        <a href="blog-web-development.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-category="career">
+                    <a href="blog-freshers-job.html" class="full-card-link" aria-label="Read Techniques for Freshers"></a>
+                    <div class="blog-image">
+                        <img src="assets/fresher-career-guide.png" alt="Fresher Career Guide" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jan 03, 2026</span>
+                            <span><i class="far fa-user"></i> Career Expert</span>
+                        </div>
+                        <h3 class="blog-title">10 Proven Techniques for Freshers</h3>
+                        <p class="blog-excerpt">Discover 10 proven techniques and the exclusive 7-7-7 Fresher Hiring Formula to help you land your first job faster.</p>
+                        <a href="blog-freshers-job.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-category="technology">
+                    <a href="blog-chatbots.html" class="full-card-link" aria-label="Read Chatbots vs Human Support"></a>
+                    <div class="blog-image">
+                        <img src="assets/chatbot-card-thumb.png" alt="AI in Business" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> Dec 15, 2025</span>
+                            <span><i class="far fa-user"></i> Tech Team</span>
+                        </div>
+                        <h3 class="blog-title" data-translate="blog_post1_title">Chatbots vs Human Support</h3>
+                        <p class="blog-excerpt" data-translate="blog_post1_excerpt">Explore how chatbots and human support are reshaping customer service—and learn which approach works best for you.</p>
+                        <a href="blog-chatbots.html" class="read-more"><span data-translate="read_more">Read More</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="assets/footer-logo.png" alt="Navabharath Technologies" loading="lazy">
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#home" data-translate="nav_home">Home</a></li>
+                    <li><a href="index.html#about" data-translate="footer_about">About</a></li>
+                    <li><a href="index.html#services" data-translate="footer_services">Services</a></li>
+                    <li><a href="navabharath-portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact" data-translate="footer_contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@NavabharathTechnologies" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Navabharath Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js" defer></script>
+    <script src="blog.js" defer></script>
+</body>
+
+</html>
+l>
