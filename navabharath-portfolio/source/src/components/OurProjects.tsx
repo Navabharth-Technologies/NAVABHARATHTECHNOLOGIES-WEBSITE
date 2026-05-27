@@ -3,11 +3,14 @@
 import { motion } from "framer-motion";
 
 export default function OurProjects() {
-  const projects = [
+  const baseProjects = [
     { name: "Tokens Boy", url: "https://tokensboy.com/", img: "/assets/Tokens Boy.png" },
     { name: "Jkdmart", url: "https://jkdmart.com/", img: "/assets/Jkdmart.png" },
     { name: "VYAPAROne", url: "#", img: "/assets/VYAPAROne.png" },
   ];
+  
+  // Repeat the base projects to ensure the marquee content is wider than the screen, preventing empty gaps
+  const projects = [...baseProjects, ...baseProjects, ...baseProjects, ...baseProjects];
 
   return (
     <section className="py-24 relative bg-white dark:bg-[#060c1c] overflow-hidden transition-colors duration-500">
