@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 
 export default function OurProjects() {
   const projects = [
-    { name: "FME", url: "https://play.google.com/store/apps/details?id=com.navabharathtechnologies.FMEapp", img: "/assets/FME (1).png" },
-    { name: "Navabharatha", url: "https://navabharathacrm.com/", img: "/assets/NAVABHARATHA 1 Final.png" },
     { name: "Tokens Boy", url: "https://tokensboy.com/", img: "/assets/Tokens Boy.png" },
     { name: "Jkdmart", url: "https://jkdmart.com/", img: "/assets/Jkdmart.png" },
     { name: "VYAPAROne", url: "#", img: "/assets/VYAPAROne.png" },
