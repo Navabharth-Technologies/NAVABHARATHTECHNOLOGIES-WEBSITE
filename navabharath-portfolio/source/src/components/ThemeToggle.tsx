@@ -24,15 +24,15 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       <div className="absolute inset-0 flex justify-between items-center px-1.5 pointer-events-none">
-        <Moon className="w-3.5 h-3.5 text-slate-400 opacity-0 dark:opacity-100 transition-opacity" />
-        <Sun className="w-3.5 h-3.5 text-amber-500 dark:opacity-0 transition-opacity" />
+        <Moon className="w-3.5 h-3.5 text-slate-400 opacity-100 dark:opacity-0 transition-opacity" />
+        <Sun className="w-3.5 h-3.5 text-amber-500 opacity-0 dark:opacity-100 transition-opacity" />
       </div>
       <motion.div
         animate={{ x: theme === "dark" ? 28 : 0 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
         className="w-5 h-5 bg-white rounded-full shadow-sm z-10 flex items-center justify-center"
       >
-        {theme === "dark" ? <Moon className="w-3 h-3 text-slate-700" /> : <Sun className="w-3 h-3 text-amber-500" />}
+        {theme === "dark" ? <Sun className="w-3 h-3 text-amber-500" /> : <Moon className="w-3 h-3 text-slate-700" />}
       </motion.div>
     </button>
   );

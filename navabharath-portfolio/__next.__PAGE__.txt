@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[59633,["/navabharath-portfolio/_next/static/chunks/0l863mb_4o6ls.js","/navabharath-portfolio/_next/static/chunks/0lpjz90yqfab2.js","/navabharath-portfolio/_next/static/chunks/0r1~t4_kuwg8t.js"],"ClientPageRoot"]
-3:I[31333,["/navabharath-portfolio/_next/static/chunks/0l863mb_4o6ls.js","/navabharath-portfolio/_next/static/chunks/0lpjz90yqfab2.js","/navabharath-portfolio/_next/static/chunks/0r1~t4_kuwg8t.js","/navabharath-portfolio/_next/static/chunks/0no7idcec~ebk.js"],"default"]
-6:I[78182,["/navabharath-portfolio/_next/static/chunks/0l863mb_4o6ls.js","/navabharath-portfolio/_next/static/chunks/0lpjz90yqfab2.js","/navabharath-portfolio/_next/static/chunks/0r1~t4_kuwg8t.js"],"OutletBoundary"]
+2:I[83209,["/navabharath-portfolio/_next/static/chunks/0eqaf6f~fjsb-.js","/navabharath-portfolio/_next/static/chunks/071056o9xvwhj.js","/navabharath-portfolio/_next/static/chunks/0anbr._2b5.qw.js"],"ClientPageRoot"]
+3:I[59673,["/navabharath-portfolio/_next/static/chunks/0eqaf6f~fjsb-.js","/navabharath-portfolio/_next/static/chunks/071056o9xvwhj.js","/navabharath-portfolio/_next/static/chunks/0anbr._2b5.qw.js","/navabharath-portfolio/_next/static/chunks/05ybi9bj6d_ay.js"],"default"]
+6:I[48153,["/navabharath-portfolio/_next/static/chunks/0eqaf6f~fjsb-.js","/navabharath-portfolio/_next/static/chunks/071056o9xvwhj.js","/navabharath-portfolio/_next/static/chunks/0anbr._2b5.qw.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/navabharath-portfolio/_next/static/chunks/0no7idcec~ebk.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"T_KK993XHn5Qlm6NRaeXu"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/navabharath-portfolio/_next/static/chunks/05ybi9bj6d_ay.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"oilFbPWcczZ7h6rNdTyCT"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
