@@ -272,7 +272,7 @@ app.use('/IVR_Webpage', express.static(path.join(__dirname, 'IVR_Webpage', 'IVR_
 app.use('/ivr', express.static(path.join(__dirname, 'IVR_Webpage', 'IVR_Webpage', 'docs')));
 
 // Serve the built Next.js portfolio application
-app.use('/navabharath-portfolio', express.static(path.join(__dirname, 'navabharath-portfolio', 'navabharath-portfolio', 'out')));
+app.use('/navabharath-portfolio', express.static(path.join(__dirname, 'navabharath-portfolio')));
 
 // Serve static files from the root directory with HTML fallback for clean URLs
 app.use(express.static(path.join(__dirname), { extensions: ['html', 'htm'] }));

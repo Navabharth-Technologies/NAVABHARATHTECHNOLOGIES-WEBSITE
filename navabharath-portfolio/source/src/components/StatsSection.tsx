@@ -41,11 +41,11 @@ const Counter = ({ value, label }: { value: number; label: string }) => {
 
 export default function StatsSection() {
   const stats = [
-    { value: 5, label: "Active Clients" },
+    { value: 10, label: "Active Clients" },
     { value: 20, label: "Websites Maintained" },
-    { value: 50, label: "Social Media Managed" },
-    { value: 10, label: "Custom Applications" },
-    { value: 100, label: "Ongoing Digital Support" },
+    { value: 10, label: "Social Media Managed" },
+    { value: 15, label: "Custom Applications" },
+    { value: 50, label: "Ongoing Digital Support" },
   ];
 
   return (

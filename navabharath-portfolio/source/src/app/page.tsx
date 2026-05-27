@@ -11,6 +11,7 @@ import PortfolioFilters from "@/components/PortfolioFilters";
 import ClientCard from "@/components/ClientCard";
 import { clients } from "@/data/clients";
 import { motion } from "framer-motion";
+import OurProjects from "@/components/OurProjects";
 
 export default function PortfolioPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -104,6 +105,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
+        <OurProjects />
         <ServicesDelivered />
         <ProcessTimeline />
         <CTASection />

@@ -222,7 +222,7 @@ export const clients: Client[] = [
     longDescription: "NAVABHARATH TECHNOLOGIES developed a token booking application for Shetty's Hi-Tech Multispeciality Dental Clinic, making appointment flow, queue handling, and patient convenience easier through a digital solution.",
     icon: Smartphone,
     logoUrl: "/navabharath-portfolio/clients/shetty-dental.png",
-    previewUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000&auto=format&fit=crop", 
+    previewUrl: "/navabharath-portfolio/clients/covers/shetty-cover.jpeg", 
     tags: ["Mobile App", "Healthcare", "Queue Management", "Booking"],
     projectType: "Application Development",
     highlights: [
