@@ -14,6 +14,7 @@ export type Client = {
       name: string;
       androidUrl?: string;
       macUrl?: string;
+      bgImage?: string;
     }[];
   };
   instagramVideos?: string[];
@@ -129,12 +130,14 @@ export const clients: Client[] = [
         {
           name: "FME",
           androidUrl: "https://play.google.com/store/apps/details?id=com.navabharathtechnologies.FMEapp&hl=en_IN",
-          macUrl: "https://apps.apple.com/us/app/fme-facilitator-mock-exam/id6758837825"
+          macUrl: "https://apps.apple.com/us/app/fme-facilitator-mock-exam/id6758837825",
+          bgImage: "/navabharath-portfolio/fme-bg.png"
         },
         {
           name: "Navabharatha CRM",
           androidUrl: "https://play.google.com/store/search?q=navabharatha+crm&c=apps&hl=en_IN",
-          macUrl: "https://apps.apple.com/us/app/navabharatha-crm/id6759153041"
+          macUrl: "https://apps.apple.com/us/app/navabharatha-crm/id6759153041",
+          bgImage: "/navabharath-portfolio/navabharatha-crm-bg.png"
         }
       ]
     },

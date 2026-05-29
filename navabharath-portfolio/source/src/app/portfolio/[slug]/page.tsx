@@ -98,19 +98,36 @@ export default async function ClientDetailPage({ params }: { params: Promise<{ s
                   <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Applications</h3>
                   <div className="flex flex-wrap gap-6">
                     {client.links.apps.map((app, idx) => (
-                      <div key={idx} className="flex flex-col gap-3 p-5 bg-white/50 dark:bg-slate-800/30 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-sm">
-                        <span className="text-[#0b1220] dark:text-white font-semibold flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                          {app.name}
-                        </span>
-                        <div className="flex flex-wrap gap-3">
+                      <div 
+                        key={idx} 
+                        className={`flex flex-col gap-3 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-sm relative overflow-hidden min-h-[140px] justify-between ${!app.bgImage ? 'bg-white/50 dark:bg-slate-800/30' : 'bg-slate-900/10'}`}
+                      >
+                        {app.bgImage && (
+                          <div className="absolute inset-0 z-0">
+                            <Image 
+                              src={app.bgImage} 
+                              alt={`${app.name} background`} 
+                              fill 
+                              className="object-cover opacity-90 transition-transform duration-500 hover:scale-105" 
+                            />
+                            {/* Dark overlay to ensure text/buttons are readable if needed */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10" />
+                          </div>
+                        )}
+                        <div className="relative z-20">
+                          <span className={`font-semibold flex items-center gap-2 ${app.bgImage ? 'text-white drop-shadow-md' : 'text-[#0b1220] dark:text-white'}`}>
+                            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                            {app.name}
+                          </span>
+                        </div>
+                        <div className="relative z-20 flex flex-wrap gap-3 mt-auto">
                           {app.androidUrl && (
-                            <a href={app.androidUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 text-sm font-medium hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-all border border-emerald-200 dark:border-emerald-800/50 transform-gpu">
+                            <a href={app.androidUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-sm font-medium hover:bg-white dark:hover:bg-emerald-900/60 transition-all border border-emerald-200/50 dark:border-emerald-800/50 transform-gpu shadow-sm backdrop-blur-sm">
                               Android <ArrowUpRight className="w-3 h-3" />
                             </a>
                           )}
                           {app.macUrl && (
-                            <a href={app.macUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400 text-sm font-medium hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-all border border-purple-200 dark:border-purple-800/50 transform-gpu">
+                            <a href={app.macUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-sm font-medium hover:bg-white dark:hover:bg-purple-900/60 transition-all border border-purple-200/50 dark:border-purple-800/50 transform-gpu shadow-sm backdrop-blur-sm">
                               Mac <ArrowUpRight className="w-3 h-3" />
                             </a>
                           )}
