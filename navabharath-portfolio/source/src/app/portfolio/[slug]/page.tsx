@@ -128,7 +128,7 @@ export default async function ClientDetailPage({ params }: { params: Promise<{ s
                           )}
                           {app.macUrl && (
                             <a href={app.macUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-sm font-medium hover:bg-white dark:hover:bg-purple-900/60 transition-all border border-purple-200/50 dark:border-purple-800/50 transform-gpu shadow-sm backdrop-blur-sm">
-                              Mac <ArrowUpRight className="w-3 h-3" />
+                              iOS <ArrowUpRight className="w-3 h-3" />
                             </a>
                           )}
                         </div>
