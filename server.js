@@ -268,8 +268,8 @@ app.post('/send-career-email', upload.single('resume'), async (req, res) => {
 });
 
 // Serve the built IVR Webpage React application
-app.use('/IVR_Webpage', express.static(path.join(__dirname, 'IVR_Webpage', 'IVR_Webpage', 'docs')));
-app.use('/ivr', express.static(path.join(__dirname, 'IVR_Webpage', 'IVR_Webpage', 'docs')));
+app.use('/IVR_Webpage', express.static(path.join(__dirname, 'IVR_Webpage', 'docs')));
+app.use('/ivr', express.static(path.join(__dirname, 'IVR_Webpage', 'docs')));
 
 // Serve the built Next.js portfolio application
 app.use('/navabharath-portfolio', express.static(path.join(__dirname, 'navabharath-portfolio')));
