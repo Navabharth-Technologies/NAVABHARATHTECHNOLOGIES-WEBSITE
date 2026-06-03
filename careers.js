@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const API = 'https://company-website-backend-91ia.onrender.com/api';
+    const API = 'https://navabharathtechnologies-website-backend.onrender.com/api';
 
     // ── Load jobs from live API ──────────────────────────────────
     let allJobs = [];

@@ -1503,7 +1503,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 console.log('Sending email...');
 
-                const response = await fetch('https://company-website-backend-91ia.onrender.com/send-email', {
+                const response = await fetch('https://navabharathtechnologies-website-backend.onrender.com/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
